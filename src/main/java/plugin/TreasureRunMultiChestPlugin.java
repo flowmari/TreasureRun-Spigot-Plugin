@@ -105,12 +105,27 @@ public class TreasureRunMultiChestPlugin extends JavaPlugin implements Listener,
   private boolean previousStorm = false;
   private boolean previousThundering = false;
 
+  // =======================================================
+  // ✅ StartThemePlayer（ゲーム開始テーマ）
+  // =======================================================
+  private StartThemePlayer startThemePlayer;
+
+  public StartThemePlayer getStartThemePlayer() {
+    return startThemePlayer;
+  }
+
   @Override
   public void onEnable() {
     getLogger().info("🌈 TreasureRunMultiChestPlugin: 起動 🌈");
 
     saveDefaultConfig();
     Bukkit.getPluginManager().registerEvents(this, this);
+
+    // ✅ StartThemePlayer を生成して保持
+    startThemePlayer = new StartThemePlayer(this);
+
+    // ✅ ログアウトでBGM停止（事故防止）
+    Bukkit.getPluginManager().registerEvents(new StartThemeStopListener(this), this);
 
     Bukkit.getPluginManager().registerEvents(new StageMobControlListener(this), this);
 
@@ -155,6 +170,21 @@ public class TreasureRunMultiChestPlugin extends JavaPlugin implements Listener,
 
     this.rankRewardManager = new RankRewardManager(this);
 
+    // =======================================================
+    // ✅ 追加：debug=true のときだけ /rank コマンドを有効化（撮影・動作確認用）
+    // - OP限定は RankDebugCommand 側でチェック
+    // - debug=false のときはコマンドを登録しない（本番で事故りにくい）
+    // =======================================================
+    if (getConfig().getBoolean("debug")) {
+      getLogger().warning("⚠ DEBUG MODE ON: /rank デバッグコマンドを有効化します");
+      if (getCommand("rank") != null) {
+        getCommand("rank").setExecutor(new RankDebugCommand(this));
+      } else {
+        getLogger().warning("⚠ /rank が plugin.yml に見つかりません（commands: rank を追加済みか確認してください）");
+      }
+    }
+    // =======================================================
+
     CustomRecipeLoader recipeLoader = new CustomRecipeLoader(this);
     recipeLoader.registerRecipes();
 
@@ -169,6 +199,9 @@ public class TreasureRunMultiChestPlugin extends JavaPlugin implements Listener,
 
   @Override
   public void onDisable() {
+    // ✅ 停止（鳴りっぱなし防止）
+    if (startThemePlayer != null) startThemePlayer.stopAll();
+
     if (bossBar != null) bossBar.removeAll();
 
     if (finishTitleTaskId != -1) {
@@ -202,6 +235,9 @@ public class TreasureRunMultiChestPlugin extends JavaPlugin implements Listener,
   public void onPlayerQuit(PlayerQuitEvent event) {
     Player player = event.getPlayer();
     if (!isRunning) return;
+
+    // ✅ 退出時も停止（事故防止）
+    if (startThemePlayer != null) startThemePlayer.stop(player);
 
     if (taskId != -1) {
       Bukkit.getScheduler().cancelTask(taskId);
@@ -488,6 +524,9 @@ public class TreasureRunMultiChestPlugin extends JavaPlugin implements Listener,
       }
       treasureChestManager.removeAllChests();
 
+      // ✅ 念のため開始前に開始テーマの残タスクを止める（事故防止）
+      if (startThemePlayer != null) startThemePlayer.stop(player);
+
       playerScores.put(player.getUniqueId(), 0);
 
       if (treasureRunGameEffectsPlugin != null) {
@@ -551,6 +590,9 @@ public class TreasureRunMultiChestPlugin extends JavaPlugin implements Listener,
 
       saveScore(player.getName(), score, elapsedSec, difficulty);
 
+      // ✅ 手動終了でも必ず停止
+      if (startThemePlayer != null) startThemePlayer.stop(player);
+
       if (taskId != -1) {
         Bukkit.getScheduler().cancelTask(taskId);
         taskId = -1;
@@ -606,6 +648,9 @@ public class TreasureRunMultiChestPlugin extends JavaPlugin implements Listener,
       gameStageManager.clearShopEntities();
     }
     treasureChestManager.removeAllChests();
+
+    // ✅ 念のため開始前に開始テーマの残タスクを止める（事故防止）
+    if (startThemePlayer != null) startThemePlayer.stop(player);
 
     playerScores.put(player.getUniqueId(), 0);
 
@@ -730,6 +775,9 @@ public class TreasureRunMultiChestPlugin extends JavaPlugin implements Listener,
     // =========================================================
     if (!isRunning) return;
     isRunning = false;
+
+    // ✅ 最後の宝箱で終了が確定したら、開始テーマはここで止める（DJと競合させない）
+    if (startThemePlayer != null) startThemePlayer.stop(player);
 
     // ✅ 2) 最後の宝箱で終了が確定した時点で、finishDelayまで待たずに難易度ブロックを先に片付ける
     if (gameStageManager != null) {
@@ -887,8 +935,13 @@ public class TreasureRunMultiChestPlugin extends JavaPlugin implements Listener,
   }
 
   private void startGame(Player player) {
+    getLogger().info("[StartTheme] startGame called by " + player.getName()); // ★追加
+
     isRunning = true;
     startTime = System.currentTimeMillis();
+
+    // ✅ ゲーム開始時に開始テーマを流す（ここが本命）
+    if (startThemePlayer != null) startThemePlayer.play(player);
 
     if (gameStageManager != null && currentStageCenter != null) {
       gameStageManager.startLoopEffects(currentStageCenter);
@@ -937,6 +990,9 @@ public class TreasureRunMultiChestPlugin extends JavaPlugin implements Listener,
         int finalScore = playerScores.getOrDefault(player.getUniqueId(), 0);
         long elapsedSec = (System.currentTimeMillis() - startTime) / 1000L;
         saveScore(player.getName(), finalScore, elapsedSec, difficulty);
+
+        // ✅ 時間切れでも必ず停止
+        if (startThemePlayer != null) startThemePlayer.stop(player);
 
         isRunning = false;
         if (bossBar != null) bossBar.removeAll();
@@ -1016,6 +1072,19 @@ public class TreasureRunMultiChestPlugin extends JavaPlugin implements Listener,
   // ★追加（ここだけ追加）：
   public TreasureChestManager getTreasureChestManager() {
     return treasureChestManager;
+  }
+
+  // =======================================================
+  // ✅ 追加：/rank デバッグコマンドから呼ぶための getter
+  // （DB/ランキングを触らず、演出だけ発火するために RankRewardManager を渡す）
+  // =======================================================
+  public RankRewardManager getRankRewardManager() {
+    return rankRewardManager;
+  }
+
+  // ★追加（ここだけ追加）：effects の getter
+  public TreasureRunGameEffectsPlugin getTreasureRunGameEffectsPlugin() {
+    return treasureRunGameEffectsPlugin;
   }
 
   // ✅ 互換：残しておく（DJ総Tickが取れない場合のフォールバックにも使える）

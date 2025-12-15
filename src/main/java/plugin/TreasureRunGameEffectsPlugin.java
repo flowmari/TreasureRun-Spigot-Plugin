@@ -139,7 +139,8 @@ public class TreasureRunGameEffectsPlugin implements Listener {
     }
   }
 
-  private void playMiniDJEffect(Player player) {
+  // ★ここだけ変更（private → public）
+  public void playMiniDJEffect(Player player) {
     player.playSound(player.getLocation(), Sound.ENTITY_ITEM_PICKUP, 1.0f, 1.0f);
     player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_BASS, 1.0f, 1.0f);
 

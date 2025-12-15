@@ -9,6 +9,12 @@ commands:
     usage: /<command> [difficulty]
     permission: treasure.start
 
+  game:
+    description: TreasureRun game control
+    usage: /game start | /game end
+    permission: treasure.game
+    permission-message: "§cこのコマンドを使う権限がありません。"
+
   gameRank:
     description: Show the top 10 players.
     usage: /<command>
@@ -41,10 +47,23 @@ commands:
     usage: /clearStageBlocks
     permission: treasure.clearstage
 
+  # =============================
+  # ★追加：撮影・動作確認用（デバッグ）コマンド
+  # =============================
+  rank:
+    description: Debug - force rank effect (1/2/3)
+    usage: /rank <1|2|3>
+    permission: treasure.debug.rank
+    permission-message: "§cこのコマンドを使う権限がありません。（OP限定）"
+
 permissions:
   treasure.start:
     description: /gameStart コマンドを使用できる権限
     default: true
+
+  treasure.game:
+    description: /game start|end を使用できる権限
+    default: op
 
   treasure.rank:
     description: /gameRank コマンドを使用できる権限
@@ -68,4 +87,11 @@ permissions:
 
   treasure.clearstage:
     description: /clearStageBlocks でステージの難易度ブロックを掃除できる権限
-    default: op　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　
+    default: op
+
+  # =============================
+  # ★追加：/rank（デバッグ）用権限
+  # =============================
+  treasure.debug.rank:
+    description: /rank <1|2|3> を使用できる権限（撮影・動作確認用）
+    default: op　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　
