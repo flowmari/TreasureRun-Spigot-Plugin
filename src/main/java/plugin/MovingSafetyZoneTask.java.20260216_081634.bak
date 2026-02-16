@@ -23,8 +23,8 @@ import org.bukkit.scheduler.BukkitRunnable;
 import java.util.*;
 
 /**
- * ✅ 商人の周囲3マス：レモンイエローのリング（動くセーフゾーン）
- * ✅ 商人の歩いた跡：数秒だけ残光（レモンイエローの軌跡）
+ * ✅ 商人の周囲3マス：アンバーのリング（動くセーフゾーン）
+ * ✅ 商人の歩いた跡：数秒だけ残光（アンバーの軌跡）
  * ✅ プレイヤーが離れると世界が冷える（霧/音）
  *
  * ✅ 追加（完全版）
@@ -171,10 +171,8 @@ public class MovingSafetyZoneTask extends BukkitRunnable {
     this.glassCrackData = Bukkit.createBlockData("minecraft:glass");
   }
 
-  
+  @Override
   public void run() {
-    if (localTick % 40 == 0) plugin.getLogger().info("[MSZ] tick=" + localTick);
-
     // ✅ 自前tick更新（2tick周期前提）
     localTick += TASK_PERIOD_TICKS;
 
@@ -408,36 +406,6 @@ public class MovingSafetyZoneTask extends BukkitRunnable {
       }
     }
   }
-
-  /**
-   * ✅ このtickで踏まれていない床は、参照カウントが残っていても強制的に復元する（最終保険）
-   * → 黄色が「残る / 広がる」系を物理的に止める
-   */
-  private void forceRestoreNotSteppedFloors() {
-    // floorRefCount/originalFloorData を触るので、キーをコピーしてから回す
-    List<BlockKey> keys = new ArrayList<>(floorRefCount.keySet());
-
-    for (BlockKey key : keys) {
-      if (key == null) continue;
-
-      // ✅ 今tickで踏まれている床は復元しない
-      if (steppedFloorsThisTick.contains(key)) continue;
-
-      // ✅ 踏まれていないのに残ってる床 → 強制復元
-      floorRefCount.remove(key);
-
-      BlockData original = originalFloorData.remove(key);
-      if (original == null) continue;
-
-      World w = key.getWorld();
-      if (w == null) continue;
-
-      Block b = w.getBlockAt(key.x, key.y, key.z);
-      b.setBlockData(original, false);
-    }
-  }
-
-
 
   /**
    * ✅ “ステージ床だけ”を対象にする判定

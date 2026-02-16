@@ -75,6 +75,7 @@ public class TreasureRunMultiChestPlugin extends JavaPlugin implements Listener,
 
   private TreasureChestManager treasureChestManager;
   private TreasureRunGameEffectsPlugin treasureRunGameEffectsPlugin;
+  private UfoCaravanController ufo;
   private GameStageManager gameStageManager;
   private Location currentStageCenter = null;
 
@@ -289,7 +290,9 @@ public class TreasureRunMultiChestPlugin extends JavaPlugin implements Listener,
 
     this.itemFactory = new TreasureItemFactory(this);
 
-    this.gameStageManager = new GameStageManager(this);
+    this.ufo = new UfoCaravanController(this);
+
+    this.gameStageManager = new GameStageManager(this, this.ufo);
     Bukkit.getPluginManager().registerEvents(this.gameStageManager, this);
     getLogger().info("[TreasureRun] GameStageManager event registered!");
 
@@ -1085,7 +1088,7 @@ public class TreasureRunMultiChestPlugin extends JavaPlugin implements Listener,
     final long rewardStartDelay = 65L;
     final long finishDelay = rewardStartDelay + djTotalTicksFinal;
 
-    Bukkit.getScheduler().runTaskLater(this, () -> {
+    Bukkit.getScheduler().runTaskLater(TreasureRunMultiChestPlugin.this, () -> {
       if (!player.isOnline()) return;
 
       if (rankRewardManager != null && rank > 0) {
@@ -1099,7 +1102,7 @@ public class TreasureRunMultiChestPlugin extends JavaPlugin implements Listener,
 
     final long titleStartDelay = rewardStartDelay + 1;
 
-    Bukkit.getScheduler().runTaskLater(this, () -> {
+    Bukkit.getScheduler().runTaskLater(TreasureRunMultiChestPlugin.this, () -> {
       if (!player.isOnline()) return;
 
       final long keepDuration = Math.max(0L, finishDelay - titleStartDelay);
@@ -1150,7 +1153,7 @@ public class TreasureRunMultiChestPlugin extends JavaPlugin implements Listener,
     final String playerName = player.getName();
     final UUID playerUuid = player.getUniqueId();
 
-    Bukkit.getScheduler().runTaskLater(this, () -> {
+    Bukkit.getScheduler().runTaskLater(TreasureRunMultiChestPlugin.this, () -> {
 
       if (finishTitleTaskId != -1) {
         Bukkit.getScheduler().cancelTask(finishTitleTaskId);
@@ -1405,7 +1408,7 @@ public class TreasureRunMultiChestPlugin extends JavaPlugin implements Listener,
         // 3) （切替後）チャットに英語メッセージ
         // 4) 1行空けて名言（グレー）
         // 5) ✅ 3回連続の時だけ：場面切替後に “サブタイトルの表示場所” に水色で OVERCOMING ADVERSITY を出す
-        Bukkit.getScheduler().runTaskLater(this, () -> {
+        Bukkit.getScheduler().runTaskLater(TreasureRunMultiChestPlugin.this, () -> {
           if (!player.isOnline()) return;
 
           // ✅ 画面切替直前：日本語案内が次画面で上のほうに残りにくいように「空行で押し上げる」
@@ -1702,9 +1705,12 @@ public class TreasureRunMultiChestPlugin extends JavaPlugin implements Listener,
               startThemePlayer.playGoActivate(player);
 
               // ✅ ✅ ✅ GO! の瞬間だけ「画面が震える + 光 + 爆発風スパークル」
-              playGoSparkleShock(player);
-
-              // ✅ ✅ ✅ 最大サイズで見せる：Title行に GO! だけ（太字）
+              Bukkit.getScheduler().runTaskLater(TreasureRunMultiChestPlugin.this, () -> {
+  if (player != null && player.isOnline()) {
+    playGoSparkleShock(player);
+  }
+}, 1L);
+// ✅ ✅ ✅ 最大サイズで見せる：Title行に GO! だけ（太字）
               // ✅ 色は「白に一番近いグレー」
               player.sendTitle(
                   ChatColor.GRAY + "" + ChatColor.BOLD + "GO!",
@@ -1730,7 +1736,7 @@ public class TreasureRunMultiChestPlugin extends JavaPlugin implements Listener,
   private void playGoSparkleShock(Player player) {
     if (player == null || !player.isOnline()) return;
 
-    Location base = player.getLocation();
+    Location base = player.getLocation().clone();
     World w = base.getWorld();
     if (w == null) return;
 

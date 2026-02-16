@@ -57,11 +57,8 @@ public class GameStageManager implements Listener {
   }
 
   public GameStageManager(TreasureRunMultiChestPlugin plugin) {
-  this(plugin, null);
-  // AUTO: ensure MovingSafetyZoneTask is running
-  startMovingSafetyZoneTask();
-}
-
+    this(plugin, null);
+  }
 
   // =======================================================
   // ✅ Seaside Ocean "確実に海上" 補助
@@ -297,7 +294,7 @@ public class GameStageManager implements Listener {
     spawnTraderAndLlamas(stageCenter);
 
     // ✅ 黄色ファイヤーボール＋床変化（MovingSafetyZone）を起動（存在すれば）
-    startMovingSafetyZoneTask();
+    startMovingSafetyZoneTaskDirect(stageCenter);
 
     // ✅ UFO開始（存在すれば）
     startUfoIfAvailable(player, stageCenter);
@@ -713,54 +710,6 @@ public class GameStageManager implements Listener {
     World w = center.getWorld();
     if (w == null) return;
 
-    // ✅ cleanup previous Treasure Shop caravan to prevent duplicates
-
-
-    if (stageTrader != null && stageTrader.isValid()) { try { stageTrader.remove(); } catch (Exception ignored) {} }
-
-
-    stageTrader = null;
-
-
-    for (org.bukkit.entity.TraderLlama l : new java.util.ArrayList<>(stageLlamas)) {
-
-
-      if (l != null && l.isValid()) { try { l.remove(); } catch (Exception ignored) {} }
-
-
-    }
-
-
-    stageLlamas.clear();
-
-
-    // ✅ also remove stray Treasure Shop traders/llamas left in area (radius 48)
-
-
-    try {
-
-
-      for (org.bukkit.entity.Entity e : w.getNearbyEntities(center, 48, 24, 48)) {
-
-
-        if (e instanceof org.bukkit.entity.WanderingTrader || e instanceof org.bukkit.entity.TraderLlama) {
-
-
-          String n = e.getCustomName();
-
-
-          if (n != null && n.contains("Treasure Shop")) { try { e.remove(); } catch (Exception ignored) {} }
-
-
-        }
-
-
-      }
-
-
-    } catch (Exception ignored) {}
-
-
     Location traderLoc = center.clone().add(0.5, 1.1, 0.5);
 
     WanderingTrader trader = w.spawn(traderLoc, WanderingTrader.class, t -> {
@@ -793,41 +742,6 @@ public class GameStageManager implements Listener {
 
       stageLlamas.add(llama);
     }
-    // ===============================
-    // ✅ UFO に「この商人＋ラマ2頭」を bind する（増殖防止の決定打）
-    //    これにより、UFO側は "trader != null && valid" ルートに入り、
-    //    追加スポーン（保険）しなくなる
-    // ===============================
-    try {
-      Object target = this.ufo;
-      if (target == null) {
-        target = tryCallGetter(plugin, "getUfo");
-        if (target == null) target = tryCallGetter(plugin, "getUfoController");
-      }
-
-      if (target != null) {
-        // bindGroup(WanderingTrader, List<TraderLlama>) を反射で呼ぶ（型違いでも壊れない）
-        Method bm = findBestMethod(
-            target.getClass(),
-            "bindGroup",
-            new Class[]{ org.bukkit.entity.WanderingTrader.class, java.util.List.class }
-        );
-
-        if (bm != null) {
-          bm.setAccessible(true);
-          bm.invoke(target, trader, new java.util.ArrayList<>(stageLlamas));
-          plugin.getLogger().info("✅ UFO bindGroup OK: trader=" + trader.getUniqueId()
-              + " llamas=" + stageLlamas.size());
-        } else {
-          plugin.getLogger().warning("⚠ UFO bindGroup method not found on " + target.getClass().getName());
-        }
-      } else {
-        plugin.getLogger().warning("⚠ UFO controller is null; skip bindGroup");
-      }
-    } catch (Throwable t) {
-      plugin.getLogger().warning("⚠ UFO bindGroup failed: " + t);
-    }
-
 
     final Location centerLoc = traderLoc.clone();
 
@@ -1301,25 +1215,7 @@ public class GameStageManager implements Listener {
   }
 
 
-    private void startMovingSafetyZoneTask() {
-    stopMovingSafetyZoneTask();
-
-    try {
-      // direct-new: do not use reflection
-      MovingSafetyZoneTask task = new MovingSafetyZoneTask(plugin);
-
-
-      // MovingSafetyZoneTask expects 2-tick period (its internal tick logic assumes period=2)
-      movingSafetyZoneHandle = task.runTaskTimer(plugin, 0L, 2L);
-
-      plugin.getLogger().info("MovingSafetyZoneTask started (direct-new) period=2");
-    } catch (Throwable t) {
-      plugin.getLogger().severe("MovingSafetyZoneTask start failed: " + t);
-      t.printStackTrace();
-    }
-  }
-
-private void stopMovingSafetyZoneTask() {
+  private void stopMovingSafetyZoneTask() {
     if (movingSafetyZoneHandle != null) {
       movingSafetyZoneHandle.cancel();
       movingSafetyZoneHandle = null;

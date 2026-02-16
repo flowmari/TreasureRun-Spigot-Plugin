@@ -171,10 +171,8 @@ public class MovingSafetyZoneTask extends BukkitRunnable {
     this.glassCrackData = Bukkit.createBlockData("minecraft:glass");
   }
 
-  
+  @Override
   public void run() {
-    if (localTick % 40 == 0) plugin.getLogger().info("[MSZ] tick=" + localTick);
-
     // ✅ 自前tick更新（2tick周期前提）
     localTick += TASK_PERIOD_TICKS;
 
