@@ -25,3 +25,8 @@ mysql-init/
 
 # env/secrets
 .env
+# local backups
+*.bak
+*.bak_*
+*.bak.*
+*.bak-*
