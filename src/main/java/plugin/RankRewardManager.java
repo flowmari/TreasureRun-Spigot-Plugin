@@ -112,6 +112,9 @@ public class RankRewardManager {
       spawnAuroraCurtain(player, auroraDuration, 7.0, 5.0, 3);
       spawnRainbowArc(player, rainbowDuration, 2.6, 1.5, 42);
       spawnRainbowWolfParadeGuaranteed(player, keep);
+      // ✅ NEW：1位の追加演出（虹の上を空に左→右へドラゴン → 1秒後にペガサス）
+      spawnSkyDragonOverRainbow(player, keep, 0L);    // すぐ
+      spawnSkyPegasusOverRainbow(player, keep, 20L);  // 1秒後（20 ticks）
 
     } else if (rank == 2) {
       spawnAuroraCurtain(player, auroraDuration, 5.2, 3.6, 2);
@@ -461,6 +464,209 @@ public class RankRewardManager {
     }
 
     w.spawnParticle(Particle.END_ROD, base, 2, 0.25, 0.18, 0.25, 0.01);
+  }
+
+  // ======================================================
+  // ✅ NEW：1位追加演出（ドラゴン→1秒後ペガサス）
+  // 虹の上の空を “左→右” に横切るように飛ばす
+  // ※安全のため Entity（本物のエンダードラゴン等）は出さず、粒子でシルエットを描く
+  // ======================================================
+
+  private void spawnSkyDragonOverRainbow(Player player, long keepTicks, long delayTicks) {
+    if (player == null || !player.isOnline()) return;
+    long safeDelay = Math.max(0L, delayTicks);
+
+    Bukkit.getScheduler().runTaskLater(plugin, () -> {
+      if (!player.isOnline()) return;
+      int duration = (int) Math.max(50L, Math.min(120L, keepTicks)); // 2.5s〜6sくらい
+      spawnFlyingSpriteOverRainbow(player, duration, 7.0, 3.4, FlyingSpriteType.DRAGON);
+    }, safeDelay);
+  }
+
+  private void spawnSkyPegasusOverRainbow(Player player, long keepTicks, long delayTicks) {
+    if (player == null || !player.isOnline()) return;
+    long safeDelay = Math.max(0L, delayTicks);
+
+    Bukkit.getScheduler().runTaskLater(plugin, () -> {
+      if (!player.isOnline()) return;
+      int duration = (int) Math.max(50L, Math.min(120L, keepTicks)); // 2.5s〜6sくらい
+      spawnFlyingSpriteOverRainbow(player, duration, 7.0, 3.4, FlyingSpriteType.PEGASUS);
+    }, safeDelay);
+  }
+
+  private enum FlyingSpriteType { DRAGON, PEGASUS }
+
+  /**
+   * 虹の上の空を、左→右へ横切る粒子スプライト（ドラゴン/ペガサス）。
+   * - プレイヤー視点に対して前方に固定
+   * - 半円アーチの軌道で「虹の上っぽさ」を出す
+   */
+  private void spawnFlyingSpriteOverRainbow(Player player,
+      int durationTicks,
+      double radius,
+      double arcHeight,
+      FlyingSpriteType type) {
+    World w = player.getWorld();
+    if (w == null) return;
+
+    // プレイヤー向き（水平）
+    Vector dir = player.getLocation().getDirection().clone();
+    dir.setY(0);
+    if (dir.lengthSquared() < 0.0001) dir = new Vector(0, 0, 1);
+    dir.normalize();
+
+    // 左右方向
+    Vector side = new Vector(-dir.getZ(), 0, dir.getX()).normalize();
+
+    // 虹の“上の空”の基準点：前方 + 高め
+    Location base = player.getEyeLocation().clone()
+        .add(dir.clone().multiply(4.2))
+        .add(0, 2.8, 0);
+
+    final Vector sd = side.clone();
+    final Location bs = base.clone();
+    final World world = w;
+
+    new BukkitRunnable() {
+      int t = 0;
+
+      @Override
+      public void run() {
+        if (!player.isOnline()) { cancel(); return; }
+
+        double p = t / (double) durationTicks; // 0..1
+        double s = (p * 2.0) - 1.0;            // -1..+1（左→右）
+
+        // 虹の上をなぞるアーチ（0..π）
+        double y = Math.sin(p * Math.PI) * arcHeight;
+
+        Location center = bs.clone()
+            .add(sd.clone().multiply(s * radius))
+            .add(0, y, 0);
+
+        // 進行方向（右へ）
+        Vector heading = sd.clone().normalize();
+
+        if (type == FlyingSpriteType.DRAGON) {
+          drawDragonParticles(world, center, heading, t);
+        } else {
+          drawPegasusParticles(world, center, heading, t);
+        }
+
+        t++;
+        if (t >= durationTicks) cancel();
+      }
+    }.runTaskTimer(plugin, 0L, 1L);
+  }
+
+  // -------------------------
+  // DRAGON（粒子シルエット）
+  // -------------------------
+  private void drawDragonParticles(World world, Location c, Vector heading, int tick) {
+    Color body = Color.fromRGB(60, 10, 80);      // 濃い紫
+    Color wing = Color.fromRGB(120, 30, 160);    // 紫
+
+    Vector right = new Vector(-heading.getZ(), 0, heading.getX()).normalize();
+    Vector up = new Vector(0, 1, 0);
+
+    // 体幹（点列）
+    for (int i = -3; i <= 3; i++) {
+      Location p = c.clone()
+          .add(heading.clone().multiply(i * 0.25))
+          .add(0, Math.sin((tick + i) * 0.25) * 0.05, 0);
+      world.spawnParticle(Particle.REDSTONE, p, 1, 0, 0, 0, 0,
+          new DustOptions(body, 1.35f));
+    }
+
+    // 頭
+    Location head = c.clone().add(heading.clone().multiply(1.0)).add(0, 0.10, 0);
+    world.spawnParticle(Particle.REDSTONE, head, 2, 0.02, 0.02, 0.02, 0,
+        new DustOptions(Color.fromRGB(30, 0, 40), 1.6f));
+
+    // 目（緑）
+    Location eye1 = head.clone().add(right.clone().multiply(0.15)).add(0, 0.02, 0);
+    Location eye2 = head.clone().add(right.clone().multiply(-0.15)).add(0, 0.02, 0);
+    world.spawnParticle(Particle.REDSTONE, eye1, 1, 0, 0, 0, 0,
+        new DustOptions(Color.fromRGB(80, 255, 120), 1.0f));
+    world.spawnParticle(Particle.REDSTONE, eye2, 1, 0, 0, 0, 0,
+        new DustOptions(Color.fromRGB(80, 255, 120), 1.0f));
+
+    // 翼（羽ばたき）
+    double flap = 0.55 + 0.25 * Math.sin(tick * 0.35);
+    for (int i = 0; i <= 5; i++) {
+      double r = i * 0.35;
+
+      Location lw = c.clone()
+          .add(right.clone().multiply(-r))
+          .add(up.clone().multiply(flap * (0.15 + i * 0.04)));
+      Location rw = c.clone()
+          .add(right.clone().multiply(r))
+          .add(up.clone().multiply(flap * (0.15 + i * 0.04)));
+
+      world.spawnParticle(Particle.REDSTONE, lw, 1, 0.02, 0.02, 0.02, 0,
+          new DustOptions(wing, 1.2f));
+      world.spawnParticle(Particle.REDSTONE, rw, 1, 0.02, 0.02, 0.02, 0,
+          new DustOptions(wing, 1.2f));
+    }
+
+    // 尾（火花）
+    Location tail = c.clone().add(heading.clone().multiply(-1.0)).add(0, -0.05, 0);
+    world.spawnParticle(Particle.END_ROD, tail, 2, 0.08, 0.03, 0.08, 0.01);
+    if (tick % 2 == 0) {
+      world.spawnParticle(Particle.FLAME, tail, 2, 0.05, 0.02, 0.05, 0.005);
+    }
+  }
+
+  // -------------------------
+  // PEGASUS（粒子シルエット）
+  // -------------------------
+  private void drawPegasusParticles(World world, Location c, Vector heading, int tick) {
+    Color body = Color.fromRGB(245, 245, 255);   // 白
+    Color wing = Color.fromRGB(190, 230, 255);   // 淡い水色
+
+    Vector right = new Vector(-heading.getZ(), 0, heading.getX()).normalize();
+    Vector up = new Vector(0, 1, 0);
+
+    // 体（小さめ）
+    for (int i = -2; i <= 2; i++) {
+      Location p = c.clone()
+          .add(heading.clone().multiply(i * 0.22))
+          .add(0, Math.sin((tick + i) * 0.25) * 0.04, 0);
+      world.spawnParticle(Particle.REDSTONE, p, 1, 0, 0, 0, 0,
+          new DustOptions(body, 1.25f));
+    }
+
+    // 頭
+    Location head = c.clone().add(heading.clone().multiply(0.9)).add(0, 0.10, 0);
+    world.spawnParticle(Particle.REDSTONE, head, 1, 0.02, 0.02, 0.02, 0,
+        new DustOptions(body, 1.35f));
+
+    // たてがみ（キラッ）
+    if (tick % 2 == 0) {
+      world.spawnParticle(Particle.END_ROD, head, 1, 0.05, 0.05, 0.05, 0.01);
+    }
+
+    // 翼（大きく）
+    double flap = 0.65 + 0.35 * Math.sin(tick * 0.45);
+    for (int i = 0; i <= 6; i++) {
+      double r = i * 0.30;
+
+      Location lw = c.clone()
+          .add(right.clone().multiply(-r))
+          .add(up.clone().multiply(flap * (0.18 + i * 0.05)));
+      Location rw = c.clone()
+          .add(right.clone().multiply(r))
+          .add(up.clone().multiply(flap * (0.18 + i * 0.05)));
+
+      world.spawnParticle(Particle.REDSTONE, lw, 1, 0.02, 0.02, 0.02, 0,
+          new DustOptions(wing, 1.15f));
+      world.spawnParticle(Particle.REDSTONE, rw, 1, 0.02, 0.02, 0.02, 0,
+          new DustOptions(wing, 1.15f));
+    }
+
+    // 尾（雲）
+    Location tail = c.clone().add(heading.clone().multiply(-0.9)).add(0, -0.05, 0);
+    world.spawnParticle(Particle.CLOUD, tail, 2, 0.08, 0.03, 0.08, 0.01);
   }
 
   private void playSafe(Player player, Sound sound, float volume, float pitch) {

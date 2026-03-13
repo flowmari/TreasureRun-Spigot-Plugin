@@ -1540,7 +1540,7 @@ public class TreasureRunMultiChestPlugin extends JavaPlugin implements Listener,
             if (line == null) continue;
             String trimmed = line.trim();
             if (trimmed.isEmpty()) continue;
-            player.sendMessage(ChatColor.GRAY + trimmed); // ✅ ここだけ変更（WHITE → GRAY）
+            player.sendMessage(ChatColor.WHITE + trimmed); // ✅ ここだけ変更（WHITE → GRAY）
           }
         }
       }

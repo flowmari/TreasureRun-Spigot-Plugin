@@ -183,7 +183,7 @@ public class QuoteFavoriteBookClickListener implements Listener {
         if (r == null) continue;
         String trimmed = r.trim();
         if (trimmed.isEmpty()) continue;
-        player.sendMessage(ChatColor.GRAY + trimmed);
+        player.sendMessage(ChatColor.WHITE + trimmed);
       }
       return true;
     }
