@@ -1671,6 +1671,7 @@ language:
     asl_gloss: BLACK_WOOL
 
   # ✅ 2枚目みたいに「その言語で説明文」を出す（無ければ loreDefault）
+  # Default lore shown in language GUI (keep this set; code fallback is empty string)
   loreDefault: "Click to select"
   lore:
     ja: "クリックして選択"
