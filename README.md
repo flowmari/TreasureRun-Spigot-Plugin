@@ -240,13 +240,6 @@ customRecipes:
 なスコア競争」にも対応できます。
 
 
-### Localization (i18n)
-
-- **Bundled defaults:** `src/main/resources/languages/*.yml` are packaged into the JAR for reproducible releases.
-- **Ops-friendly overrides:** on boot, any missing files are seeded into `plugins/TreasureRun/languages/` (data folder). After that, the data folder is treated as the source of truth so servers can tweak translations without rebuilding.
-- **Enabled languages:** controlled via `config.yml` (`language.allowedLanguages`).
-- **Safe fallback:** `<lang>` → `en` → `ja` → `default.unknown`.
-- **Hygiene:** extra `*.yml` files not listed in `language.allowedLanguages` are not deleted automatically—only logged as warnings to avoid accidental data loss.
 
 ### Localization (i18n)
 
