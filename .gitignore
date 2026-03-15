@@ -49,3 +49,8 @@ plugin.yml
 # local-only artifacts (do not commit)
 backups/
 _local_only/
+# local migration backups (do not commit)
+src/main/resources/languages/__thin_backup__*/
+src/main/resources/languages_bak_*/
+src/main/resources/languages/*.broken_*
+_local_backup/
