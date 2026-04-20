@@ -1,0 +1,1073 @@
+# Active player-facing 19-locale audit (pass 01)
+
+## command.checkTreasureEmerald.playersOnly
+- asl_gloss: ONLY PLAYERS CAN USE THIS COMMAND.
+- de: Dieser Befehl kann nur von Spielern verwendet werden.
+- en: Only players can use this command.
+- es: Solo los jugadores pueden usar este comando.
+- fi: Vain pelaajat voivat käyttää tätä komentoa.
+- fr: Seuls les joueurs peuvent utiliser cette commande.
+- hi: यह कमांड केवल खिलाड़ी ही चला सकते हैं।
+- is: Aðeins leikmenn geta notað þessa skipun.
+- it: Solo i giocatori possono usare questo comando.
+- ja: このコマンドはプレイヤーのみ実行できます。
+- ko: 이 명령어는 플레이어만 사용할 수 있습니다.
+- la: Hoc mandatum a lusoribus tantum adhiberi potest.
+- lzh: 此令唯玩家可用。
+- nl: Alleen spelers kunnen deze opdracht gebruiken.
+- pt: Somente jogadores podem usar este comando.
+- ru: Эту команду могут использовать только игроки.
+- sa: अयं आदेशः केवलं क्रीडकैः एव उपयुज्यते।
+- sv: Det här kommandot kan bara användas av spelare.
+- zh_tw: 只有玩家可以使用這個指令。
+
+## command.craftSpecialEmerald.needDiamonds
+- asl_gloss: &cNEED 3 DIAMOND TO CRAFT SPECIAL EMERALD.
+- de: &cDu brauchst 3 Diamanten, um einen Spezial-Smaragd herzustellen.
+- en: &cYou need 3 diamonds to craft a Special Emerald.
+- es: &cNecesitas 3 diamantes para fabricar una Esmeralda Especial.
+- fi: &cTarvitset 3 timanttia valmistaaksesi erikoissmaragdin.
+- fr: &cIl vous faut 3 diamants pour fabriquer une Émeraude spéciale.
+- hi: &cस्पेशल एमराल्ड बनाने के लिए 3 हीरे चाहिए।
+- is: &cÞú þarft 3 demanta til að búa til sérstakan smaragð.
+- it: &cTi servono 3 diamanti per creare uno Smeraldo Speciale.
+- ja: &cスペシャルエメラルドの作成にはダイヤモンドが3個必要です。
+- ko: &c특제 에메랄드를 제작하려면 다이아몬드 3개가 필요합니다.
+- la: &cTres adamantes tibi necessarii sunt ut Smaragdum Specialem conficias.
+- lzh: &c欲製特製綠寶石，須鑽石三枚。
+- nl: &cJe hebt 3 diamanten nodig om een Speciale Smaragd te maken.
+- pt: &cVocê precisa de 3 diamantes para criar uma Esmeralda Especial.
+- ru: &cЧтобы создать Особый изумруд, нужны 3 алмаза.
+- sa: &cविशेषमरकत-निर्माणाय त्रयः हीरकाः आवश्यकाः।
+- sv: &cDu behöver 3 diamanter för att skapa en specialsmaragd.
+- zh_tw: &c製作特製綠寶石需要 3 顆鑽石。
+
+## command.craftSpecialEmerald.playersOnly
+- asl_gloss: &cONLY PLAYER CAN USE THIS COMMAND.
+- de: &cDiesen Befehl können nur Spieler verwenden.
+- en: &cOnly players can use this command.
+- es: &cSolo los jugadores pueden usar este comando.
+- fi: &cVain pelaajat voivat käyttää tätä komentoa.
+- fr: &cSeuls les joueurs peuvent utiliser cette commande.
+- hi: &cइस कमांड का उपयोग केवल खिलाड़ी कर सकते हैं।
+- is: &cAðeins leikmenn geta notað þessa skipun.
+- it: &cSolo i giocatori possono usare questo comando.
+- ja: &cこのコマンドはプレイヤーのみ使用できます。
+- ko: &c이 명령어는 플레이어만 사용할 수 있습니다.
+- la: &cHoc mandato soli lusores uti possunt.
+- lzh: &c唯玩家可用此令。
+- nl: &cAlleen spelers kunnen dit commando gebruiken.
+- pt: &cSomente jogadores podem usar este comando.
+- ru: &cТолько игроки могут использовать эту команду.
+- sa: &cएतत् आदेशं केवलं क्रीडकाः एव उपयोक्तुं शक्नुवन्ति।
+- sv: &cDet här kommandot kan bara användas av spelare.
+- zh_tw: &c只有玩家可以使用這個指令。
+
+## command.craftSpecialEmerald.success
+- asl_gloss: &bSPECIAL EMERALD CRAFT FINISH USE 3 DIAMOND!
+- de: &bDu hast mit 3 Diamanten einen Spezial-Smaragd hergestellt!
+- en: &bYou crafted a Special Emerald using 3 diamonds!
+- es: &b¡Has fabricado una Esmeralda Especial con 3 diamantes!
+- fi: &bValmistit erikoissmaragdin käyttämällä 3 timanttia!
+- fr: &bVous avez fabriqué une Émeraude spéciale avec 3 diamants !
+- hi: &bआपने 3 हीरों से एक स्पेशल एमराल्ड बना लिया!
+- is: &bÞú bjóst til sérstakan smaragð með 3 demöntum!
+- it: &bHai creato uno Smeraldo Speciale usando 3 diamanti!
+- ja: &bダイヤモンド3個でスペシャルエメラルドを作成しました！
+- ko: &b다이아몬드 3개로 특제 에메랄드를 제작했습니다!
+- la: &bSmaragdum Specialem tribus adamantibus confecisti!
+- lzh: &b已用鑽石三枚製成特製綠寶石！
+- nl: &bJe hebt met 3 diamanten een Speciale Smaragd gemaakt!
+- pt: &bVocê criou uma Esmeralda Especial usando 3 diamantes!
+- ru: &bВы создали Особый изумруд, используя 3 алмаза!
+- sa: &bत्रिभिः हीरकैः विशेषमरकतम् निर्मितम्!
+- sv: &bDu skapade en specialsmaragd med 3 diamanter!
+- zh_tw: &b你已使用 3 顆鑽石製作出特製綠寶石！
+
+## command.lang.emptyCode
+- asl_gloss: LANGUAGE CODE EMPTY. EXAMPLE: /lang ja
+- de: Der Sprachcode ist leer. Beispiel: /lang ja
+- en: Language code is empty. Example: /lang ja
+- es: El código de idioma está vacío. Ejemplo: /lang ja
+- fi: Kielikoodi puuttuu. Esimerkki: /lang ja
+- fr: Le code de langue est vide. Exemple : /lang ja
+- hi: भाषा कोड खाली है। उदाहरण: /lang ja
+- is: Tungumálakóðinn er tómur. Dæmi: /lang ja
+- it: Il codice lingua è vuoto. Esempio: /lang ja
+- ja: 言語コードが空です。例: /lang ja
+- ko: 언어 코드가 비어 있습니다. 예: /lang ja
+- la: Codex linguae vacuus est. Exemplum: /lang ja
+- lzh: 語碼為空。例：/lang ja
+- nl: De taalcode is leeg. Voorbeeld: /lang ja
+- pt: O código do idioma está vazio. Exemplo: /lang ja
+- ru: Код языка пуст. Пример: /lang ja
+- sa: भाषासङ्केतः रिक्तः अस्ति। उदाहरणम्: /lang ja
+- sv: Språkkoden är tom. Exempel: /lang ja
+- zh_tw: 語言代碼為空。範例：/lang ja
+
+## command.lang.guiNotReady
+- asl_gloss: LANGUAGE GUI NOT READY.
+- de: Die Sprach-GUI wurde nicht initialisiert.
+- en: Language GUI is not initialized.
+- es: La interfaz de idioma no está inicializada.
+- fi: Kielikäyttöliittymää ei ole alustettu.
+- fr: L’interface de langue n’est pas initialisée.
+- hi: भाषा GUI प्रारंभ नहीं हुई है।
+- is: Tungumálaviðmótið hefur ekki verið frumstillt.
+- it: La GUI della lingua non è stata inizializzata.
+- ja: 言語GUIが初期化されていません。
+- ko: 언어 GUI가 초기화되지 않았습니다.
+- la: GUI linguae nondum initiata est.
+- lzh: 語言介面尚未備妥。
+- nl: De taal-GUI is niet geïnitialiseerd.
+- pt: A interface de idioma não foi inicializada.
+- ru: Интерфейс выбора языка не инициализирован.
+- sa: भाषा-GUI अद्यापि प्रारब्धा नास्ति।
+- sv: Språk-GUI:t har inte initialiserats.
+- zh_tw: 語言 GUI 尚未初始化。
+
+## command.lang.list.gui
+- asl_gloss: GUI: /lang OR /lang gui
+- de: GUI: /lang oder /lang gui
+- en: GUI: /lang or /lang gui
+- es: GUI: /lang o /lang gui
+- fi: GUI: /lang tai /lang gui
+- fr: Interface : /lang ou /lang gui
+- hi: GUI: /lang या /lang gui
+- is: GUI: /lang eða /lang gui
+- it: GUI: /lang oppure /lang gui
+- ja: GUI: /lang または /lang gui
+- ko: GUI: /lang 또는 /lang gui
+- la: GUI: /lang vel /lang gui
+- lzh: 介面：/lang 或 /lang gui
+- nl: GUI: /lang of /lang gui
+- pt: GUI: /lang ou /lang gui
+- ru: GUI: /lang или /lang gui
+- sa: GUI: /lang अथवा /lang gui
+- sv: GUI: /lang eller /lang gui
+- zh_tw: GUI：/lang 或 /lang gui
+
+## command.lang.list.title
+- asl_gloss: === LANGUAGE ===
+- de: === Sprachen ===
+- en: === Languages ===
+- es: === Idiomas ===
+- fi: === Kielet ===
+- fr: === Langues ===
+- hi: === भाषाएँ ===
+- is: === Tungumál ===
+- it: === Lingue ===
+- ja: === 言語 ===
+- ko: === 언어 ===
+- la: === Linguae ===
+- lzh: === 語言 ===
+- nl: === Talen ===
+- pt: === Idiomas ===
+- ru: === Языки ===
+- sa: === भाषाः ===
+- sv: === Språk ===
+- zh_tw: === 語言 ===
+
+## command.lang.list.usage
+- asl_gloss: USE: /lang <code> EXAMPLE: /lang ja
+- de: Verwendung: /lang <code> Beispiel: /lang ja
+- en: Usage: /lang <code> Example: /lang ja
+- es: Uso: /lang <code> Ejemplo: /lang ja
+- fi: Käyttö: /lang <code> Esimerkki: /lang ja
+- fr: Utilisation : /lang <code> Exemple : /lang ja
+- hi: उपयोग: /lang <code> उदाहरण: /lang ja
+- is: Notkun: /lang <code> Dæmi: /lang ja
+- it: Uso: /lang <code> Esempio: /lang ja
+- ja: 使い方: /lang <code> 例: /lang ja
+- ko: 사용법: /lang <code> 예: /lang ja
+- la: Usus: /lang <code> Exemplum: /lang ja
+- lzh: 用法：/lang <code> 例：/lang ja
+- nl: Gebruik: /lang <code> Voorbeeld: /lang ja
+- pt: Uso: /lang <code> Exemplo: /lang ja
+- ru: Использование: /lang <code> Пример: /lang ja
+- sa: उपयोगः: /lang <code> उदाहरणम्: /lang ja
+- sv: Användning: /lang <code> Exempel: /lang ja
+- zh_tw: 用法：/lang <code> 範例：/lang ja
+
+## command.lang.resetDone
+- asl_gloss: ✅ YOUR SAVED LANGUAGE RESET FINISH. NEXT TIME GUI OPEN.
+- de: ✅ Deine gespeicherte Sprache wurde zurückgesetzt. Beim nächsten Mal wird die GUI geöffnet.
+- en: ✅ Your saved language has been reset. The GUI will open next time.
+- es: ✅ Tu idioma guardado se ha restablecido. La próxima vez se abrirá la interfaz.
+- fi: ✅ Tallennettu kielesi on nollattu. Käyttöliittymä avautuu seuraavalla kerralla.
+- fr: ✅ Votre langue enregistrée a été réinitialisée. L’interface s’ouvrira la prochaine fois.
+- hi: ✅ आपकी सहेजी हुई भाषा रीसेट कर दी गई है। अगली बार GUI खुलेगा।
+- is: ✅ Vistað tungumál þitt hefur verið endurstillt. Næst opnast viðmótið sjálfkrafa.
+- it: ✅ La lingua salvata è stata reimpostata. La prossima volta si aprirà la GUI.
+- ja: ✅ 保存済み言語をリセットしました（次回はGUIが出ます）
+- ko: ✅ 저장된 언어가 초기화되었습니다. 다음에는 GUI가 열립니다.
+- la: ✅ Lingua tua servata restituta est. Proxima vice GUI aperietur.
+- lzh: ✅ 所存語言已復初。後次將自啟介面。
+- nl: ✅ Je opgeslagen taal is gereset. De volgende keer wordt de GUI geopend.
+- pt: ✅ O seu idioma salvo foi redefinido. Na próxima vez, a interface será aberta.
+- ru: ✅ Сохранённый язык был сброшен. В следующий раз откроется интерфейс.
+- sa: ✅ भवतः सञ्चितभाषा पुनःस्थापिता। अनन्तरं GUI स्वयमेव उद्घाटिष्यते।
+- sv: ✅ Ditt sparade språk har återställts. Nästa gång öppnas GUI:t.
+- zh_tw: ✅ 你已儲存的語言已重設。下次將會開啟 GUI。
+
+## command.lang.guiCancelledGameMenu
+- asl_gloss: LANGUAGE SELECT CANCEL. OPEN AGAIN COMMAND /gameMenu gui.
+- de: Die Sprachauswahl wurde abgebrochen. Zum erneuten Öffnen führe /gameMenu gui aus.
+- en: Language selection was cancelled. To open it again, run /gameMenu gui.
+- es: Se canceló la selección de idioma. Para abrirla de nuevo, ejecuta /gameMenu gui.
+- fi: Kielen valinta peruttiin. Avaa se uudelleen komennolla /gameMenu gui.
+- fr: La sélection de la langue a été annulée. Pour la rouvrir, exécutez /gameMenu gui.
+- hi: भाषा चयन रद्द कर दिया गया। फिर से खोलने के लिए /gameMenu gui चलाएँ।
+- is: Hætt var við tungumálaval. Keyrðu /gameMenu gui til að opna það aftur.
+- it: La selezione della lingua è stata annullata. Per aprirla di nuovo, esegui /gameMenu gui.
+- ja: 言語選択をキャンセルしました。もう一度開くには /gameMenu gui を実行してください。
+- ko: 언어 선택이 취소되었습니다. 다시 열려면 /gameMenu gui 를 실행하세요.
+- la: Electio linguae intermissa est. Ut denuo aperias, /gameMenu gui exsequere.
+- lzh: 語言之選已止。欲復開之，請行 /gameMenu gui。
+- nl: De taalselectie is geannuleerd. Voer /gameMenu gui uit om deze opnieuw te openen.
+- pt: A seleção de idioma foi cancelada. Para abrir novamente, execute /gameMenu gui.
+- ru: Выбор языка был отменён. Чтобы открыть его снова, выполните /gameMenu gui.
+- sa: भाषा-चयनं निरस्तम्। पुनरुद्घाटनाय /gameMenu gui चलयतु।
+- sv: Språkvalet avbröts. Kör /gameMenu gui för att öppna det igen.
+- zh_tw: 語言選擇已取消。若要再次開啟，請執行 /gameMenu gui。
+
+## command.lang.guiCancelledGameStart
+- asl_gloss: LANGUAGE SELECT CANCEL. TRY AGAIN COMMAND /gameStart <easy|normal|hard>.
+- de: Die Sprachauswahl wurde abgebrochen. Zum erneuten Versuch führe /gameStart <easy|normal|hard> aus.
+- en: Language selection was cancelled. To try again, run /gameStart <easy|normal|hard>.
+- es: Se canceló la selección de idioma. Para volver a intentarlo, ejecuta /gameStart <easy|normal|hard>.
+- fi: Kielen valinta peruttiin. Yritä uudelleen komennolla /gameStart <easy|normal|hard>.
+- fr: La sélection de la langue a été annulée. Pour réessayer, exécutez /gameStart <easy|normal|hard>.
+- hi: भाषा चयन रद्द कर दिया गया। फिर से प्रयास करने के लिए /gameStart <easy|normal|hard> चलाएँ।
+- is: Hætt var við tungumálaval. Keyrðu /gameStart <easy|normal|hard> til að reyna aftur.
+- it: La selezione della lingua è stata annullata. Per riprovare, esegui /gameStart <easy|normal|hard>.
+- ja: 言語選択をキャンセルしました。再度試すには /gameStart <easy|normal|hard> を実行してください。
+- ko: 언어 선택이 취소되었습니다. 다시 시도하려면 /gameStart <easy|normal|hard> 를 실행하세요.
+- la: Electio linguae intermissa est. Ut denuo coneris, /gameStart <easy|normal|hard> exsequere.
+- lzh: 語言之選已止。欲再試之，請行 /gameStart <easy|normal|hard>。
+- nl: De taalselectie is geannuleerd. Voer /gameStart <easy|normal|hard> uit om het opnieuw te proberen.
+- pt: A seleção de idioma foi cancelada. Para tentar de novo, execute /gameStart <easy|normal|hard>.
+- ru: Выбор языка был отменён. Чтобы попробовать ещё раз, выполните /gameStart <easy|normal|hard>.
+- sa: भाषा-चयनं निरस्तम्। पुनः प्रयासाय /gameStart <easy|normal|hard> चलयतु।
+- sv: Språkvalet avbröts. Kör /gameStart <easy|normal|hard> för att försöka igen.
+- zh_tw: 語言選擇已取消。若要再試一次，請執行 /gameStart <easy|normal|hard>。
+
+## command.lang.guiTooManyShown
+- asl_gloss: TOO-MANY LANGUAGE ALLOW. GUI SHOW FIRST 27 ONLY.
+- de: Es sind zu viele erlaubte Sprachen konfiguriert, daher werden im GUI nur die ersten 27 angezeigt.
+- en: Too many allowed languages were configured, so only the first 27 are shown in the GUI.
+- es: Se configuraron demasiados idiomas permitidos, por lo que la GUI solo muestra los primeros 27.
+- fi: Sallittuja kieliä on määritetty liikaa, joten GUI näyttää vain ensimmäiset 27.
+- fr: Trop de langues autorisées ont été configurées, donc l’interface n’affiche que les 27 premières.
+- hi: अनुमत भाषाएँ बहुत अधिक हैं, इसलिए GUI में केवल पहली 27 भाषाएँ ही दिखाई जा रही हैं।
+- is: Of mörg leyfð tungumál voru stillt, þannig að GUI-ið sýnir aðeins fyrstu 27.
+- it: Sono state configurate troppe lingue consentite, quindi la GUI mostra solo le prime 27.
+- ja: 許可言語が多すぎるため、GUIには先頭27件のみ表示しています。
+- ko: 허용된 언어가 너무 많이 설정되어 있어 GUI에는 처음 27개만 표시됩니다.
+- la: Quia nimis multae linguae permissae sunt, in GUI tantum primae XXVII ostenduntur.
+- lzh: 所許語言過多，介面僅示前二十七項。
+- nl: Er zijn te veel toegestane talen ingesteld, daarom toont de GUI alleen de eerste 27.
+- pt: Foram configurados idiomas permitidos demais, então a GUI mostra apenas os primeiros 27.
+- ru: Настроено слишком много разрешённых языков, поэтому в GUI отображаются только первые 27.
+- sa: अनुमोदितभाषाः अतिबह्व्यः सन्ति, अतः GUI मध्ये प्रथमा एव २७ भाषाः दर्श्यन्ते।
+- sv: För många tillåtna språk har konfigurerats, så GUI:t visar bara de första 27.
+- zh_tw: 允許的語言設定過多，因此 GUI 只會顯示前 27 項。
+
+## favorites.empty.noFav
+- asl_gloss: NO FAVORITES YET.
+- de: Noch keine Favoriten.
+- en: No favorites yet.
+- es: Aún no hay favoritos.
+- fi: Ei vielä suosikkeja.
+- fr: Aucun favori pour le moment.
+- hi: अभी तक कोई पसंदीदा नहीं है।
+- is: Engin uppáhald enn.
+- it: Nessun preferito per ora.
+- ja: まだお気に入りはありません。
+- ko: 아직 즐겨찾기가 없습니다.
+- la: Nulla Dilecta adhuc.
+- lzh: 今尚無珍藏。
+- nl: Nog geen favorieten.
+- pt: Ainda não há favoritos.
+- ru: Пока нет избранного.
+- sa: अद्यापि प्रियाणि न सन्ति।
+- sv: Inga favoriter ännu.
+- zh_tw: 目前還沒有收藏。
+
+## favorites.title
+- asl_gloss: FAVORITES
+- de: Favoriten
+- en: Favorites
+- es: Favoritos
+- fi: Suosikit
+- fr: Favoris
+- hi: पसंदीदा
+- is: Uppáhald
+- it: Preferiti
+- ja: お気に入り
+- ko: 즐겨찾기
+- la: Dilecta
+- lzh: 珍藏
+- nl: Favorieten
+- pt: Favoritos
+- ru: Избранное
+- sa: प्रियाणि
+- sv: Favoriter
+- zh_tw: 收藏
+
+## favorites.toc.howtoShift
+- asl_gloss: &7SNEAK + RIGHT-CLICK OPEN FAVORITES ARCHIVE
+- de: &7Schleichen + Rechtsklick, um das Favoritenarchiv zu öffnen
+- en: &7Sneak + right-click to open the Favorites archive
+- es: &7Agáchate + clic derecho para abrir el archivo de Favoritos
+- fi: &7Hiivi + oikea napsautus avataksesi Suosikkiarkiston
+- fr: &7Accroupissez-vous + clic droit pour ouvrir l'archive des favoris
+- hi: &7झुककर + राइट-क्लिक करके पसंदीदा संग्रह खोलें
+- is: &7Læðast + hægrismella til að opna Uppáhaldsafnið
+- it: &7Accovacciati + clic destro per aprire l'archivio dei Preferiti
+- ja: &7Sneak+右クリックでお気に入り図鑑を開く
+- ko: &7웅크리기 + 우클릭으로 즐겨찾기 보관함 열기
+- la: &7Incurvare + dextrum cliccum ad archivum Dilectorum aperiendum
+- lzh: &7潛行 + 右擊，以啟珍藏之藏冊
+- nl: &7Sluipen + rechtsklikken om het Favorietenarchief te openen
+- pt: &7Agache-se + clique com o botão direito para abrir o arquivo de Favoritos
+- ru: &7Присядьте + щёлкните правой кнопкой мыши, чтобы открыть архив Избранного
+- sa: &7नम्रगतिः + दक्षिण-क्लिकेन प्रिय-संग्रहं उद्घाटय
+- sv: &7Smyg + högerklicka för att öppna Favoritarkivet
+- zh_tw: &7蹲下 + 右鍵即可開啟收藏檔案
+
+## command.stageCleanup.managerNotReady
+- asl_gloss: [TreasureRun] STAGE MANAGER NOT READY YET.
+- de: [TreasureRun] Die Stufenverwaltung ist noch nicht initialisiert.
+- en: [TreasureRun] The stage manager is not initialized.
+- es: [TreasureRun] El administrador del escenario todavía no se ha inicializado.
+- fi: [TreasureRun] Kentänhallintaa ei ole vielä alustettu.
+- fr: [TreasureRun] Le gestionnaire de niveau n’est pas encore initialisé.
+- hi: [TreasureRun] स्टेज मैनेजर अभी तक तैयार नहीं है।
+- is: [TreasureRun] Borðstýringin er ekki tilbúin enn.
+- it: [TreasureRun] Il gestore dello stage non è ancora inizializzato.
+- ja: [TreasureRun] ステージ管理が初期化されていません。
+- ko: [TreasureRun] 스테이지 관리자가 아직 초기화되지 않았습니다.
+- la: [TreasureRun] Moderator scaenae nondum paratus est.
+- lzh: [TreasureRun] 關卡管理尚未備妥。
+- nl: [TreasureRun] De stagemanager is nog niet geïnitialiseerd.
+- pt: [TreasureRun] O gerenciador de fase ainda não foi inicializado.
+- ru: [TreasureRun] Менеджер этапа ещё не инициализирован.
+- sa: [TreasureRun] स्तरव्यवस्थापकः अद्यापि सज्जो नास्ति।
+- sv: [TreasureRun] Scenhanteraren är ännu inte initierad.
+- zh_tw: [TreasureRun] 關卡管理器尚未準備完成。
+
+## command.stageCleanup.playersOnly
+- asl_gloss: &cONLY PLAYER CAN USE THIS COMMAND.
+- de: &cDiesen Befehl können nur Spieler verwenden.
+- en: &cOnly players can use this command.
+- es: &cSolo los jugadores pueden usar este comando.
+- fi: &cVain pelaajat voivat käyttää tätä komentoa.
+- fr: &cSeuls les joueurs peuvent utiliser cette commande.
+- hi: &cइस कमांड का उपयोग केवल खिलाड़ी कर सकते हैं।
+- is: &cAðeins leikmenn geta notað þessa skipun.
+- it: &cSolo i giocatori possono usare questo comando.
+- ja: &cこのコマンドはプレイヤーのみ使用できます。
+- ko: &c이 명령어는 플레이어만 사용할 수 있습니다.
+- la: &cHoc mandato soli lusores uti possunt.
+- lzh: &c唯玩家可用此令。
+- nl: &cAlleen spelers kunnen dit commando gebruiken.
+- pt: &cSomente jogadores podem usar este comando.
+- ru: &cТолько игроки могут использовать эту команду.
+- sa: &cएतत् आदेशं केवलं क्रीडकाः एव उपयोक्तुं शक्नुवन्ति।
+- sv: &cDet här kommandot kan bara användas av spelare.
+- zh_tw: &c只有玩家可以使用這個指令。
+
+## items.specialEmerald.displayName
+- asl_gloss: &6SPECIAL EMERALD
+- de: &6Spezial-Smaragd
+- en: &6Special Emerald
+- es: &6Esmeralda especial
+- fi: &6Erikoissmaragdi
+- fr: &6Émeraude spéciale
+- hi: &6विशेष एमराल्ड
+- is: &6Sérstakur smaragður
+- it: &6Smeraldo speciale
+- ja: &6特製エメラルド
+- ko: &6특별한 에메랄드
+- la: &6Smaragdus specialis
+- lzh: &6特殊綠寶石
+- nl: &6Speciale smaragd
+- pt: &6Esmeralda especial
+- ru: &6Особый изумруд
+- sa: &6विशेषमरकत
+- sv: &6Specialsmaragd
+- zh_tw: &6特殊綠寶石
+
+## items.specialEmerald.loreCrafted
+- asl_gloss: &7CRAFT IN TREASURERUN
+- de: &7In TreasureRun hergestellt
+- en: &7Crafted in TreasureRun
+- es: &7Fabricada en TreasureRun
+- fi: &7Valmistettu TreasureRunissa
+- fr: &7Fabriquée dans TreasureRun
+- hi: &7TreasureRun में निर्मित
+- is: &7Smíðað í TreasureRun
+- it: &7Creato in TreasureRun
+- ja: &7TreasureRunでクラフトした
+- ko: &7TreasureRun에서 제작한
+- la: &7In TreasureRun fabricatus
+- lzh: &7製於 TreasureRun
+- nl: &7Gemaakt in TreasureRun
+- pt: &7Criada no TreasureRun
+- ru: &7Создан в TreasureRun
+- sa: &7TreasureRun-अन्तः निर्मितम्
+- sv: &7Tillverkad i TreasureRun
+- zh_tw: &7在 TreasureRun 中製作
+
+## items.specialEmerald.loreSpecial
+- asl_gloss: &7SPECIAL EMERALD
+- de: &7Ein besonderer Smaragd
+- en: &7A special emerald
+- es: &7Una esmeralda especial
+- fi: &7Erityinen smaragdi
+- fr: &7Une émeraude spéciale
+- hi: &7एक विशेष एमराल्ड
+- is: &7Sérstakur smaragður
+- it: &7Uno smeraldo speciale
+- ja: &7特別なエメラルド
+- ko: &7특별한 에메랄드
+- la: &7Smaragdus specialis
+- lzh: &7特殊之綠寶石
+- nl: &7Een speciale smaragd
+- pt: &7Uma esmeralda especial
+- ru: &7Особый изумруд
+- sa: &7विशेषं मरकतम्
+- sv: &7En speciell smaragd
+- zh_tw: &7特殊的綠寶石
+
+## command.gameStart.playersOnly
+- asl_gloss: ONLY PLAYERS CAN USE THIS COMMAND.
+- de: Dieser Befehl kann nur von Spielern verwendet werden.
+- en: This command can only be used by players.
+- es: Este comando solo puede ser usado por jugadores.
+- fi: Vain pelaajat voivat käyttää tätä komentoa.
+- fr: Cette commande ne peut être utilisée que par des joueurs.
+- hi: यह कमांड केवल खिलाड़ी ही इस्तेमाल कर सकते हैं।
+- is: Aðeins leikmenn geta notað þessa skipun.
+- it: Questo comando può essere usato solo dai giocatori.
+- ja: このコマンドはプレイヤーからのみ実行できます。
+- ko: 이 명령어는 플레이어만 사용할 수 있습니다.
+- la: Hoc mandatum a lusoribus tantum adhiberi potest.
+- lzh: 此令惟玩家可用。
+- nl: Deze opdracht kan alleen door spelers worden gebruikt.
+- pt: Este comando só pode ser usado por jogadores.
+- ru: Эту команду могут использовать только игроки.
+- sa: अयं आदेशः केवलं क्रीडकैः एव उपयुज्यते।
+- sv: Det här kommandot kan bara användas av spelare.
+- zh_tw: 此指令只能由玩家執行。
+
+## command.gameStart.worldNotFound
+- asl_gloss: [TreasureRun] START WORLD NOT SET OR NOT FOUND.
+- de: [TreasureRun] Die Startwelt ist nicht konfiguriert oder konnte nicht gefunden werden.
+- en: [TreasureRun] The start world is not configured or could not be found.
+- es: [TreasureRun] El mundo inicial no está configurado o no se pudo encontrar.
+- fi: [TreasureRun] Aloitusmaailmaa ei ole määritetty tai sitä ei löytynyt.
+- fr: [TreasureRun] Le monde de départ n’est pas configuré ou est introuvable.
+- hi: [TreasureRun] शुरुआती दुनिया सेट नहीं है या मिल नहीं सकी।
+- is: [TreasureRun] Upphafsheimurinn er ekki stilltur eða fannst ekki.
+- it: [TreasureRun] Il mondo iniziale non è configurato oppure non è stato trovato.
+- ja: [TreasureRun] 開始ワールドが設定されていないか、見つかりませんでした。
+- ko: [TreasureRun] 시작 월드가 설정되지 않았거나 찾을 수 없습니다.
+- la: [TreasureRun] Mundus initialis non configuratus est aut inveniri non potuit.
+- lzh: [TreasureRun] 起始世界未設，或不可得。
+- nl: [TreasureRun] De startwereld is niet ingesteld of kon niet worden gevonden.
+- pt: [TreasureRun] O mundo inicial não está configurado ou não pôde ser encontrado.
+- ru: [TreasureRun] Стартовый мир не настроен или не найден.
+- sa: [TreasureRun] प्रारम्भलोकः न विन्यस्तः अथवा न लब्धः।
+- sv: [TreasureRun] Startvärlden är inte konfigurerad eller kunde inte hittas.
+- zh_tw: [TreasureRun] 起始世界未設定，或找不到該世界。
+
+## command.quoteFavorite.bookOpenFailed
+- asl_gloss: &cFAVORITES BOOK BUILD FAIL.
+- de: &cDas Favoritenbuch konnte nicht erstellt werden.
+- en: &cFailed to build the Favorites book.
+- es: &cNo se pudo generar el libro de Favoritos.
+- fi: &cSuosikkikirjan luominen epäonnistui.
+- fr: &cLa génération du livre des favoris a échoué.
+- hi: &cपसंदीदा पुस्तक बनाना विफल रहा।
+- is: &cEkki tókst að búa til Uppáhaldsbókina.
+- it: &cImpossibile generare il libro dei Preferiti.
+- ja: &cお気に入り図鑑の生成に失敗しました。
+- ko: &c즐겨찾기 책 생성에 실패했습니다.
+- la: &cLiber Dilectorum confici non potuit.
+- lzh: &c造珍藏之書失敗。
+- nl: &cHet Favorietenboek kon niet worden opgebouwd.
+- pt: &cFalha ao gerar o livro de Favoritos.
+- ru: &cНе удалось создать книгу Избранного.
+- sa: &cप्रियपुस्तकस्य निर्माणं विफलम्।
+- sv: &cDet gick inte att skapa Favoritboken.
+- zh_tw: &c建立收藏書時失敗。
+
+## command.quoteFavorite.help.book
+- asl_gloss: &7/quoteFavorite book - OPEN FAVORITES BOOK
+- de: &7/quoteFavorite book - Favoritenbuch öffnen
+- en: &7/quoteFavorite book [toc|success|timeup|other|full] : open the archive book
+- es: &7/quoteFavorite book - abrir el libro de Favoritos
+- fi: &7/quoteFavorite book - avaa Suosikkikirja
+- fr: &7/quoteFavorite book - ouvrir le livre des favoris
+- hi: &7/quoteFavorite book - पसंदीदा पुस्तक खोलें
+- is: &7/quoteFavorite book - opna Uppáhaldsbókina
+- it: &7/quoteFavorite book - apri il libro dei Preferiti
+- ja: &7/quoteFavorite book [toc|success|timeup|other|full] : 図鑑を開く
+- ko: &7/quoteFavorite book - 즐겨찾기 책 열기
+- la: &7/quoteFavorite book - librum Dilectorum aperi
+- lzh: &7/quoteFavorite book - 啟珍藏之書
+- nl: &7/quoteFavorite book - Favorietenboek openen
+- pt: &7/quoteFavorite book - abrir o livro de Favoritos
+- ru: &7/quoteFavorite book - открыть книгу Избранного
+- sa: &7/quoteFavorite book - प्रियपुस्तकं उद्घाटय
+- sv: &7/quoteFavorite book - öppna Favoritboken
+- zh_tw: &7/quoteFavorite book - 開啟收藏書本
+
+## command.quoteFavorite.help.bookOther
+- asl_gloss: &7/quoteFavorite book other - OPEN OTHER BOOK LAYOUT
+- de: &7/quoteFavorite book other - alternatives Buchlayout öffnen
+- en: &7other shows only other quotes
+- es: &7/quoteFavorite book other - abrir el otro diseño del libro
+- fi: &7/quoteFavorite book other - avaa vaihtoehtoinen kirja-asettelu
+- fr: &7/quoteFavorite book other - ouvrir l'autre mise en page du livre
+- hi: &7/quoteFavorite book other - दूसरे पुस्तक लेआउट को खोलें
+- is: &7/quoteFavorite book other - opna aðra bókauppsetningu
+- it: &7/quoteFavorite book other - apri l'altro layout del libro
+- ja: &7other はその他の名言だけを表示します
+- ko: &7/quoteFavorite book other - 다른 책 레이아웃 열기
+- la: &7/quoteFavorite book other - aliam libri formam aperi
+- lzh: &7/quoteFavorite book other - 啟別式之書
+- nl: &7/quoteFavorite book other - alternatieve boekindeling openen
+- pt: &7/quoteFavorite book other - abrir o outro layout do livro
+- ru: &7/quoteFavorite book other - открыть другой макет книги
+- sa: &7/quoteFavorite book other - अन्यं पुस्तकविन्यासम् उद्घाटय
+- sv: &7/quoteFavorite book other - öppna alternativ boklayout
+- zh_tw: &7/quoteFavorite book other - 開啟其他書本版面
+
+## command.quoteFavorite.help.bookSuccess
+- asl_gloss: &7/quoteFavorite book success - OPEN SUCCESS QUOTE BOOK
+- de: &7/quoteFavorite book success - SUCCESS-Zitatebuch öffnen
+- en: &7success shows only successful quotes
+- es: &7/quoteFavorite book success - abrir el libro de citas SUCCESS
+- fi: &7/quoteFavorite book success - avaa SUCCESS-sitaattikirja
+- fr: &7/quoteFavorite book success - ouvrir le livre des citations SUCCESS
+- hi: &7/quoteFavorite book success - SUCCESS उद्धरण पुस्तक खोलें
+- is: &7/quoteFavorite book success - opna SUCCESS-tilvitnanabók
+- it: &7/quoteFavorite book success - apri il libro delle citazioni SUCCESS
+- ja: &7success は成功名言だけを表示します
+- ko: &7/quoteFavorite book success - SUCCESS 문장 책 열기
+- la: &7/quoteFavorite book success - librum sententiarum SUCCESS aperi
+- lzh: &7/quoteFavorite book success - 啟 SUCCESS 格言之書
+- nl: &7/quoteFavorite book success - SUCCESS-citatenboek openen
+- pt: &7/quoteFavorite book success - abrir o livro de citações SUCCESS
+- ru: &7/quoteFavorite book success - открыть книгу цитат SUCCESS
+- sa: &7/quoteFavorite book success - SUCCESS उक्तिपुस्तकं उद्घाटय
+- sv: &7/quoteFavorite book success - öppna SUCCESS-citatboken
+- zh_tw: &7/quoteFavorite book success - 開啟 SUCCESS 名言書
+
+## command.quoteFavorite.help.bookTimeup
+- asl_gloss: &7/quoteFavorite book timeup - OPEN TIME_UP QUOTE BOOK
+- de: &7/quoteFavorite book timeup - TIME_UP-Zitatebuch öffnen
+- en: &7timeup shows only time-up quotes
+- es: &7/quoteFavorite book timeup - abrir el libro de citas TIME_UP
+- fi: &7/quoteFavorite book timeup - avaa TIME_UP-sitaattikirja
+- fr: &7/quoteFavorite book timeup - ouvrir le livre des citations TIME_UP
+- hi: &7/quoteFavorite book timeup - TIME_UP उद्धरण पुस्तक खोलें
+- is: &7/quoteFavorite book timeup - opna TIME_UP-tilvitnanabók
+- it: &7/quoteFavorite book timeup - apri il libro delle citazioni TIME_UP
+- ja: &7timeup は時間切れ名言だけを表示します
+- ko: &7/quoteFavorite book timeup - TIME_UP 문장 책 열기
+- la: &7/quoteFavorite book timeup - librum sententiarum TIME_UP aperi
+- lzh: &7/quoteFavorite book timeup - 啟 TIME_UP 格言之書
+- nl: &7/quoteFavorite book timeup - TIME_UP-citatenboek openen
+- pt: &7/quoteFavorite book timeup - abrir o livro de citações TIME_UP
+- ru: &7/quoteFavorite book timeup - открыть книгу цитат TIME_UP
+- sa: &7/quoteFavorite book timeup - TIME_UP उक्तिपुस्तकं उद्घाटय
+- sv: &7/quoteFavorite book timeup - öppna TIME_UP-citatboken
+- zh_tw: &7/quoteFavorite book timeup - 開啟 TIME_UP 名言書
+
+## command.quoteFavorite.help.bookToc
+- asl_gloss: &7/quoteFavorite book toc - OPEN BOOK TABLE-OF-CONTENTS
+- de: &7/quoteFavorite book toc - Inhaltsverzeichnis des Buchs öffnen
+- en: &7toc opens only the table of contents
+- es: &7/quoteFavorite book toc - abrir el índice del libro
+- fi: &7/quoteFavorite book toc - avaa kirjan sisällysluettelo
+- fr: &7/quoteFavorite book toc - ouvrir la table des matières du livre
+- hi: &7/quoteFavorite book toc - पुस्तक की विषयसूची खोलें
+- is: &7/quoteFavorite book toc - opna efnisyfirlit bókarinnar
+- it: &7/quoteFavorite book toc - apri l'indice del libro
+- ja: &7toc は目次だけを開きます
+- ko: &7/quoteFavorite book toc - 책 목차 열기
+- la: &7/quoteFavorite book toc - indicem libri aperi
+- lzh: &7/quoteFavorite book toc - 啟書之目次
+- nl: &7/quoteFavorite book toc - inhoudsopgave van het boek openen
+- pt: &7/quoteFavorite book toc - abrir o índice do livro
+- ru: &7/quoteFavorite book toc - открыть оглавление книги
+- sa: &7/quoteFavorite book toc - पुस्तकस्य विषयसूचीं उद्घाटय
+- sv: &7/quoteFavorite book toc - öppna bokens innehållsförteckning
+- zh_tw: &7/quoteFavorite book toc - 開啟書本目錄
+
+## command.quoteFavorite.help.latest
+- asl_gloss: &7/quoteFavorite latest  - SAVE LATEST QUOTE FAVORITE
+- de: &7/quoteFavorite latest  - neuestes Zitat als Favorit speichern
+- en: &7/quoteFavorite latest : save the latest quote to Favorites
+- es: &7/quoteFavorite latest  - guardar la cita más reciente como favorita
+- fi: &7/quoteFavorite latest  - tallenna uusin sitaatti Suosikkeihin
+- fr: &7/quoteFavorite latest  - enregistrer la dernière citation en favori
+- hi: &7/quoteFavorite latest  - नवीनतम उद्धरण को पसंदीदा में सहेजें
+- is: &7/quoteFavorite latest  - vista nýjustu tilvitnunina í Uppáhald
+- it: &7/quoteFavorite latest  - salva l'ultima citazione nei Preferiti
+- ja: &7/quoteFavorite latest : 最新の名言をお気に入り保存
+- ko: &7/quoteFavorite latest  - 최신 문장을 즐겨찾기에 저장
+- la: &7/quoteFavorite latest  - sententiam novissimam in Dilecta serva
+- lzh: &7/quoteFavorite latest  - 收最新格言於珍藏
+- nl: &7/quoteFavorite latest  - nieuwste citaat aan Favorieten toevoegen
+- pt: &7/quoteFavorite latest  - salvar a citação mais recente nos Favoritos
+- ru: &7/quoteFavorite latest  - добавить последнюю цитату в Избранное
+- sa: &7/quoteFavorite latest  - नवीनतमोक्तिं प्रियेषु रक्ष
+- sv: &7/quoteFavorite latest  - lägg till det senaste citatet i Favoriter
+- zh_tw: &7/quoteFavorite latest  - 將最新名言加入收藏
+
+## command.quoteFavorite.help.list
+- asl_gloss: &7/quoteFavorite list    - SHOW FAVORITES
+- de: &7/quoteFavorite list    - Favoriten anzeigen
+- en: &7/quoteFavorite list : show Favorites
+- es: &7/quoteFavorite list    - mostrar favoritos
+- fi: &7/quoteFavorite list    - näytä Suosikit
+- fr: &7/quoteFavorite list    - afficher les favoris
+- hi: &7/quoteFavorite list    - पसंदीदा सूची दिखाएँ
+- is: &7/quoteFavorite list    - sýna Uppáhald
+- it: &7/quoteFavorite list    - mostra i Preferiti
+- ja: &7/quoteFavorite list : お気に入り一覧を表示
+- ko: &7/quoteFavorite list    - 즐겨찾기 목록 보기
+- la: &7/quoteFavorite list    - Dilecta ostende
+- lzh: &7/quoteFavorite list    - 觀珍藏
+- nl: &7/quoteFavorite list    - Favorieten tonen
+- pt: &7/quoteFavorite list    - mostrar Favoritos
+- ru: &7/quoteFavorite list    - показать список Избранного
+- sa: &7/quoteFavorite list    - प्रियाणि पश्य
+- sv: &7/quoteFavorite list    - visa Favoriter
+- zh_tw: &7/quoteFavorite list    - 顯示收藏列表
+
+## command.quoteFavorite.help.remove
+- asl_gloss: &7/quoteFavorite remove <id> - REMOVE FAVORITE
+- de: &7/quoteFavorite remove <id> - Favorit entfernen
+- en: &7/quoteFavorite remove <id> : remove a favorite
+- es: &7/quoteFavorite remove <id> - eliminar favorito
+- fi: &7/quoteFavorite remove <id> - poista suosikki
+- fr: &7/quoteFavorite remove <id> - supprimer un favori
+- hi: &7/quoteFavorite remove <id> - पसंदीदा हटाएँ
+- is: &7/quoteFavorite remove <id> - fjarlægja uppáhald
+- it: &7/quoteFavorite remove <id> - rimuovi un Preferito
+- ja: &7/quoteFavorite remove <id> : お気に入りを削除
+- ko: &7/quoteFavorite remove <id> - 즐겨찾기 삭제
+- la: &7/quoteFavorite remove <id> - Dilectum remove
+- lzh: &7/quoteFavorite remove <id> - 去珍藏
+- nl: &7/quoteFavorite remove <id> - favoriet verwijderen
+- pt: &7/quoteFavorite remove <id> - remover favorito
+- ru: &7/quoteFavorite remove <id> - удалить из Избранного
+- sa: &7/quoteFavorite remove <id> - प्रियं अपासारय
+- sv: &7/quoteFavorite remove <id> - ta bort favorit
+- zh_tw: &7/quoteFavorite remove <id> - 刪除收藏
+
+## command.quoteFavorite.help.reread
+- asl_gloss: &7/quoteFavorite reread - READ LATEST QUOTE AGAIN
+- de: &7/quoteFavorite reread - letztes Zitat erneut anzeigen
+- en: &7/quoteFavorite reread [chat|title|book] : reread a quote
+- es: &7/quoteFavorite reread - volver a leer la última cita
+- fi: &7/quoteFavorite reread - näytä viimeisin sitaatti uudelleen
+- fr: &7/quoteFavorite reread - relire la dernière citation
+- hi: &7/quoteFavorite reread - नवीनतम उद्धरण फिर से पढ़ें
+- is: &7/quoteFavorite reread - sýna síðustu tilvitnun aftur
+- it: &7/quoteFavorite reread - rileggi l'ultima citazione
+- ja: &7/quoteFavorite reread [chat|title|book] : 名言を再読
+- ko: &7/quoteFavorite reread - 마지막 문장 다시 보기
+- la: &7/quoteFavorite reread - sententiam novissimam iterum lege
+- lzh: &7/quoteFavorite reread - 重讀最新格言
+- nl: &7/quoteFavorite reread - laatste citaat opnieuw tonen
+- pt: &7/quoteFavorite reread - reler a última citação
+- ru: &7/quoteFavorite reread - снова показать последнюю цитату
+- sa: &7/quoteFavorite reread - नवीनतमोक्तिं पुनः पठ
+- sv: &7/quoteFavorite reread - visa senaste citatet igen
+- zh_tw: &7/quoteFavorite reread - 再次顯示上一句名言
+
+## command.quoteFavorite.help.rereadBook
+- asl_gloss: &7/quoteFavorite reread book - OPEN REREAD BOOK AGAIN
+- de: &7/quoteFavorite reread book - Wiederlese-Buch erneut öffnen
+- en: &7book rereads using a written book
+- es: &7/quoteFavorite reread book - volver a abrir el libro de relectura
+- fi: &7/quoteFavorite reread book - avaa uudelleenlukukirja uudelleen
+- fr: &7/quoteFavorite reread book - rouvrir le livre de relecture
+- hi: &7/quoteFavorite reread book - पुनर्पाठ पुस्तक फिर खोलें
+- is: &7/quoteFavorite reread book - opna endurlestarbókina aftur
+- it: &7/quoteFavorite reread book - riapri il libro di rilettura
+- ja: &7book は本形式で再読します
+- ko: &7/quoteFavorite reread book - 다시보기 책 다시 열기
+- la: &7/quoteFavorite reread book - librum relegendi iterum aperi
+- lzh: &7/quoteFavorite reread book - 復啟重讀之書
+- nl: &7/quoteFavorite reread book - herleesboek opnieuw openen
+- pt: &7/quoteFavorite reread book - reabrir o livro de releitura
+- ru: &7/quoteFavorite reread book - снова открыть книгу перечитывания
+- sa: &7/quoteFavorite reread book - पुनःपठनपुस्तकं पुनरुद्घाटय
+- sv: &7/quoteFavorite reread book - öppna omläsningsboken igen
+- zh_tw: &7/quoteFavorite reread book - 重新開啟重讀書本
+
+## command.quoteFavorite.help.rereadTitle
+- asl_gloss: &bREREAD COMMANDS
+- de: &bWiederlesen
+- en: &7title rereads using the title display
+- es: &bRelectura
+- fi: &bUudelleenlukukomennot
+- fr: &bRelecture
+- hi: &bपुनर्पाठ कमांड
+- is: &bEndurlestar-skipanir
+- it: &bRilettura
+- ja: &7title はタイトル表示で再読します
+- ko: &b다시보기 명령어
+- la: &bMandata relegendi
+- lzh: &b重讀諸令
+- nl: &bHerleescommando's
+- pt: &bReleitura
+- ru: &bКоманды перечитывания
+- sa: &bपुनःपठनादेशाः
+- sv: &bOmläsningskommandon
+- zh_tw: &b重讀指令
+
+## command.quoteFavorite.help.title
+- asl_gloss: &bQUOTEFAVORITE COMMANDS
+- de: &bQuoteFavorite-Befehle
+- en: &bQuote Favorite commands
+- es: &bComandos de QuoteFavorite
+- fi: &bQuoteFavorite-komennot
+- fr: &bCommandes QuoteFavorite
+- hi: &bQuoteFavorite कमांड
+- is: &bQuoteFavorite skipanir
+- it: &bComandi di QuoteFavorite
+- ja: &bQuoteFavorite コマンド一覧
+- ko: &bQuoteFavorite 명령어
+- la: &bMandata QuoteFavorite
+- lzh: &bQuoteFavorite 諸令
+- nl: &bQuoteFavorite-commando's
+- pt: &bComandos do QuoteFavorite
+- ru: &bКоманды QuoteFavorite
+- sa: &bQuoteFavorite आदेशाः
+- sv: &bQuoteFavorite-kommandon
+- zh_tw: &bQuoteFavorite 指令
+
+## command.quoteFavorite.latestNotSaved
+- asl_gloss: &eLATEST QUOTE SAVE FAIL. MAYBE NO LOG YET OR ALREADY FAVORITE.
+- de: &eDas neueste Zitat konnte nicht gespeichert werden. Möglicherweise gibt es noch keinen Eintrag oder es ist bereits als Favorit gespeichert.
+- en: The latest quote was not saved. It may not exist yet, or it may already be in Favorites.
+- es: &eNo se pudo guardar la cita más reciente. Puede que aún no exista un registro o que ya esté en Favoritos.
+- fi: &eUusinta sitaattia ei voitu tallentaa. Lokia ei ehkä vielä ole, tai sitaatti on jo Suosikeissa.
+- fr: &eLa dernière citation n'a pas pu être enregistrée. Il se peut qu'il n'y ait pas encore d'entrée, ou qu'elle soit déjà dans les favoris.
+- hi: &eनवीनतम उद्धरण सहेजा नहीं जा सका। शायद अभी कोई लॉग नहीं है, या यह पहले से पसंदीदा में है।
+- is: &eEkki tókst að vista nýjustu tilvitnunina. Kannski er engin færsla til enn, eða hún er þegar í Uppáhaldi.
+- it: &eNon è stato possibile salvare la citazione più recente. Potrebbe non esserci ancora alcun record, oppure potrebbe essere già nei Preferiti.
+- ja: 最新の名言は保存されませんでした。まだ記録がないか、すでにお気に入り登録済みの可能性があります。
+- ko: &e최신 문장을 저장하지 못했습니다. 아직 기록이 없거나 이미 즐겨찾기에 저장되었을 수 있습니다.
+- la: &eSententia novissima servari non potuit. Fortasse adhuc nullum commentarium est, aut iam in Dilectis est.
+- lzh: &e最新格言未能收入珍藏。或尚無記錄，或已在珍藏中。
+- nl: &eHet nieuwste citaat kon niet worden opgeslagen. Misschien is er nog geen log of staat het al in Favorieten.
+- pt: &eNão foi possível salvar a citação mais recente. Talvez ainda não exista registro ou ela já esteja nos Favoritos.
+- ru: &eНе удалось сохранить последнюю цитату. Возможно, записей ещё нет, либо цитата уже находится в Избранном.
+- sa: &eनवीनतमा उक्तिः रक्षितुं नाशक्यत। अद्यापि लेखा नास्ति, अथवा सा पूर्वमेव प्रियेषु अस्ति।
+- sv: &eDet senaste citatet kunde inte sparas. Det kanske inte finns någon logg ännu, eller så finns det redan i Favoriter.
+- zh_tw: &e無法儲存最新名言。可能尚無紀錄，或該名言已在收藏中。
+
+## command.quoteFavorite.latestSaved
+- asl_gloss: &a★ LATEST QUOTE SAVE FAVORITES.
+- de: &a★ Das neueste Zitat wurde zu den Favoriten hinzugefügt.
+- en: ★ Saved the latest quote to Favorites.
+- es: &a★ La cita más reciente se guardó en Favoritos.
+- fi: &a★ Uusin sitaatti tallennettiin Suosikkeihin.
+- fr: &a★ La dernière citation a été ajoutée aux favoris.
+- hi: &a★ नवीनतम उद्धरण पसंदीदा में सहेज दिया गया।
+- is: &a★ Nýjasta tilvitnunin var vistuð í Uppáhald.
+- it: &a★ La citazione più recente è stata salvata nei Preferiti.
+- ja: ★ 最新の名言をお気に入りに保存しました。
+- ko: &a★ 최신 문장을 즐겨찾기에 저장했습니다.
+- la: &a★ Sententia novissima in Dilecta servata est.
+- lzh: &a★ 已收最新格言於珍藏。
+- nl: &a★ Het nieuwste citaat is aan Favorieten toegevoegd.
+- pt: &a★ A citação mais recente foi salva nos Favoritos.
+- ru: &a★ Последняя цитата добавлена в Избранное.
+- sa: &a★ नवीनतमोक्तिः प्रियेषु रक्षिता।
+- sv: &a★ Det senaste citatet har lagts till i Favoriter.
+- zh_tw: &a★ 已將最新名言加入收藏。
+
+## command.quoteFavorite.listHeader
+- asl_gloss: &bFAVORITES ({count})
+- de: &bFavoriten ({count})
+- en: &bFavorites ({count})
+- es: &bFavoritos ({count})
+- fi: &bSuosikit ({count})
+- fr: &bFavoris ({count})
+- hi: &bपसंदीदा ({count})
+- is: &bUppáhald ({count})
+- it: &bPreferiti ({count})
+- ja: &bお気に入り一覧（{count}件）
+- ko: &b즐겨찾기 ({count})
+- la: &bDilecta ({count})
+- lzh: &b珍藏 ({count})
+- nl: &bFavorieten ({count})
+- pt: &bFavoritos ({count})
+- ru: &bИзбранное ({count})
+- sa: &bप्रियाणि ({count})
+- sv: &bFavoriter ({count})
+- zh_tw: &b收藏 ({count})
+
+## command.quoteFavorite.listSeparator
+- asl_gloss: &7------------------------------
+- de: &7------------------------------
+- en: &7------------------------------
+- es: &7------------------------------
+- fi: &7------------------------------
+- fr: &7------------------------------
+- hi: &7------------------------------
+- is: &7------------------------------
+- it: &7------------------------------
+- ja: &7------------------------------
+- ko: &7------------------------------
+- la: &7------------------------------
+- lzh: &7------------------------------
+- nl: &7------------------------------
+- pt: &7------------------------------
+- ru: &7------------------------------
+- sa: &7------------------------------
+- sv: &7------------------------------
+- zh_tw: &7------------------------------
+
+## command.quoteFavorite.openBookFailed
+- asl_gloss: &cBOOK OPEN FAIL.
+- de: &cDas Buch konnte nicht geöffnet werden.
+- en: &cFailed to open the book.
+- es: &cNo se pudo abrir el libro.
+- fi: &cKirjaa ei voitu avata.
+- fr: &cImpossible d'ouvrir le livre.
+- hi: &cपुस्तक खोली नहीं जा सकी।
+- is: &cEkki tókst að opna bókina.
+- it: &cImpossibile aprire il libro.
+- ja: &c本を開けませんでした。
+- ko: &c책을 열지 못했습니다.
+- la: &cLiber aperiri non potuit.
+- lzh: &c書不可啟。
+- nl: &cHet boek kon niet worden geopend.
+- pt: &cNão foi possível abrir o livro.
+- ru: &cНе удалось открыть книгу.
+- sa: &cपुस्तकं उद्घाटयितुं न शक्यते।
+- sv: &cDet gick inte att öppna boken.
+- zh_tw: &c無法開啟書本。
+
+## command.quoteFavorite.playersOnly
+- asl_gloss: &cONLY PLAYER CAN USE THIS COMMAND.
+- de: &cDieser Befehl kann nur von Spielern verwendet werden.
+- en: &cThis command can only be used by players.
+- es: &cEste comando solo puede ser usado por jugadores.
+- fi: &cVain pelaajat voivat käyttää tätä komentoa.
+- fr: &cCette commande ne peut être utilisée que par des joueurs.
+- hi: &cइस कमांड का उपयोग केवल खिलाड़ी कर सकते हैं।
+- is: &cAðeins leikmenn geta notað þessa skipun.
+- it: &cQuesto comando può essere usato solo dai giocatori.
+- ja: &cこのコマンドはプレイヤーのみ使用できます。
+- ko: &c이 명령어는 플레이어만 사용할 수 있습니다.
+- la: &cHoc mandato soli lusores uti possunt.
+- lzh: &c唯玩家可用此令。
+- nl: &cAlleen spelers kunnen dit commando gebruiken.
+- pt: &cEste comando só pode ser usado por jogadores.
+- ru: &cЭту команду могут использовать только игроки.
+- sa: &cएतत् आदेशं केवलं क्रीडकाः एव उपयोक्तुं शक्नुवन्ति।
+- sv: &cDetta kommando kan bara användas av spelare.
+- zh_tw: &c此指令只能由玩家使用。
+
+## command.quoteFavorite.removeIdNumber
+- asl_gloss: &cID MUST BE NUMBER.
+- de: &cDie ID muss eine Zahl sein.
+- en: &cThe ID must be a number.
+- es: &cEl ID debe ser un número.
+- fi: &cID:n täytyy olla numero.
+- fr: &cL'ID doit être un nombre.
+- hi: &cID एक संख्या होनी चाहिए।
+- is: &cID verður að vera tala.
+- it: &cL'ID deve essere un numero.
+- ja: &cIDは数字で入力してください。
+- ko: &cID는 숫자로 입력해야 합니다.
+- la: &cID numerus esse debet.
+- lzh: &cID 當為數。
+- nl: &cDe ID moet een getal zijn.
+- pt: &cO ID deve ser um número.
+- ru: &cID должен быть числом.
+- sa: &cID सङ्ख्या एव भवेत्।
+- sv: &cID måste vara ett nummer.
+- zh_tw: &cID 必須是數字。
+
+## command.quoteFavorite.removeNotFound
+- asl_gloss: &cTHAT FAVORITE NOT FOUND.
+- de: &cDer angegebene Favorit wurde nicht gefunden.
+- en: &cThat favorite could not be found.
+- es: &cNo se encontró el favorito indicado.
+- fi: &cPyydettyä suosikkia ei löytynyt.
+- fr: &cLe favori indiqué est introuvable.
+- hi: &cनिर्दिष्ट पसंदीदा नहीं मिला।
+- is: &cUppáhaldið fannst ekki.
+- it: &cIl preferito indicato non è stato trovato.
+- ja: &c指定したお気に入りが見つかりませんでした。
+- ko: &c지정한 즐겨찾기를 찾을 수 없습니다.
+- la: &cDilectum petitum non inventum est.
+- lzh: &c所指珍藏不可得。
+- nl: &cHet opgegeven favoriet kon niet worden gevonden.
+- pt: &cO favorito indicado não foi encontrado.
+- ru: &cУказанное избранное не найдено.
+- sa: &cनिर्दिष्टं प्रियं न लब्धम्।
+- sv: &cDen angivna favoriten kunde inte hittas.
+- zh_tw: &c找不到指定的收藏。
+
+## command.quoteFavorite.removeSuccess
+- asl_gloss: &aFAVORITE ID {id} REMOVE DONE.
+- de: &aFavorit mit ID {id} wurde entfernt.
+- en: &aRemoved favorite ID {id}.
+- es: &aSe eliminó el favorito con ID {id}.
+- fi: &aSuosikki ID {id} poistettiin.
+- fr: &aLe favori {id} a été supprimé.
+- hi: &aपसंदीदा ID {id} हटा दी गई।
+- is: &aUppáhald með auðkennið {id} var fjarlægt.
+- it: &aIl preferito con ID {id} è stato rimosso.
+- ja: &aお気に入り ID {id} を削除しました。
+- ko: &a즐겨찾기 ID {id}를 삭제했습니다.
+- la: &aDilectum ID {id} remotum est.
+- lzh: &a已去珍藏 ID {id}。
+- nl: &aFavoriet met ID {id} is verwijderd.
+- pt: &aFavorito ID {id} removido.
+- ru: &aИзбранное с ID {id} удалено.
+- sa: &aप्रिय ID {id} अपासारितम्।
+- sv: &aFavorit med ID {id} har tagits bort.
+- zh_tw: &a已刪除收藏 ID {id}。
+
+## command.quoteFavorite.removeUsage
+- asl_gloss: &cUSE: /quoteFavorite remove <id>
+- de: &cVerwendung: /quoteFavorite remove <id>
+- en: &cUsage: /quoteFavorite remove <id>
+- es: &cUso: /quoteFavorite remove <id>
+- fi: &cKäyttö: /quoteFavorite remove <id>
+- fr: &cUtilisation : /quoteFavorite remove <id>
+- hi: &cउपयोग: /quoteFavorite remove <id>
+- is: &cNotkun: /quoteFavorite remove <id>
+- it: &cUso: /quoteFavorite remove <id>
+- ja: &c使い方: /quoteFavorite remove <id>
+- ko: &c사용법: /quoteFavorite remove <id>
+- la: &cUsus: /quoteFavorite remove <id>
+- lzh: &c用法：/quoteFavorite remove <id>
+- nl: &cGebruik: /quoteFavorite remove <id>
+- pt: &cUso: /quoteFavorite remove <id>
+- ru: &cИспользование: /quoteFavorite remove <id>
+- sa: &cप्रयोगः: /quoteFavorite remove <id>
+- sv: &cAnvändning: /quoteFavorite remove <id>
+- zh_tw: &c用法：/quoteFavorite remove <id>
+
+## command.quoteFavorite.repositoryNotReady
+- asl_gloss: &cFAVORITES FEATURE NOT READY YET.
+- de: &cDie Favoritenfunktion ist noch nicht verfügbar.
+- en: &cFavorites are not available yet.
+- es: &cLa función de Favoritos todavía no está disponible.
+- fi: &cSuosikit-toiminto ei ole vielä käytettävissä.
+- fr: &cLa fonction Favoris n'est pas encore disponible.
+- hi: &cपसंदीदा सुविधा अभी उपलब्ध नहीं है।
+- is: &cUppáhaldsvirknin er ekki tiltæk enn.
+- it: &cLa funzione Preferiti non è ancora disponibile.
+- ja: &cお気に入り機能はまだ利用できません。
+- ko: &c즐겨찾기 기능은 아직 사용할 수 없습니다.
+- la: &cRatio Dilectorum nondum praesto est.
+- lzh: &c珍藏之用，今猶未可。
+- nl: &cDe functie Favorieten is nog niet beschikbaar.
+- pt: &cO recurso Favoritos ainda não está disponível.
+- ru: &cФункция Избранного пока недоступна.
+- sa: &cप्रिय-सुविधा अद्यापि उपलब्धा नास्ति।
+- sv: &cFavoritfunktionen är inte tillgänglig ännu.
+- zh_tw: &c收藏功能目前尚未可用。
+
+## command.quoteFavorite.rereadNoQuotes
+- asl_gloss: &eNO QUOTE READY FOR REREAD YET.
+- de: &eEs gibt noch keine Zitate zum erneuten Lesen.
+- en: &eThere are no quotes to reread yet.
+- es: &eTodavía no hay citas para volver a leer.
+- fi: &eUudelleenluettavia sitaatteja ei vielä ole.
+- fr: &eAucune citation n'est encore disponible pour la relecture.
+- hi: &eदोबारा पढ़ने के लिए अभी कोई उद्धरण नहीं है।
+- is: &eEngar tilvitnanir eru enn tiltækar til endurlesturs.
+- it: &eNon ci sono ancora citazioni da rileggere.
+- ja: &e再読できる名言がまだありません。
+- ko: &e아직 다시 읽을 수 있는 문장이 없습니다.
+- la: &eNondum sunt sententiae ad relegendum.
+- lzh: &e今尚無可重讀之格言。
+- nl: &eEr zijn nog geen citaten om opnieuw te lezen.
+- pt: &eAinda não há citações para reler.
+- ru: &eПока нет цитат для повторного чтения.
+- sa: &eपुनःपठनाय उक्तयः अद्यापि न सन्ति।
+- sv: &eDet finns inga citat att läsa om ännu.
+- zh_tw: &e目前還沒有可重新閱讀的名言。
+
+## command.quoteFavorite.shortcutNotSaved
+- asl_gloss: &cLATEST QUOTE SAVE FAIL.
+- de: &cDas neueste Zitat konnte nicht gespeichert werden.
+- en: &cFailed to save the latest quote.
+- es: &cNo se pudo guardar la cita más reciente.
+- fi: &cUusimman sitaatin tallennus epäonnistui.
+- fr: &cImpossible d'enregistrer la dernière citation.
+- hi: &cनवीनतम उद्धरण सहेजा नहीं जा सका。
+- is: &cEkki tókst að vista nýjustu tilvitnunina.
+- it: &cImpossibile salvare la citazione più recente.
+- ja: &cお気に入り保存に失敗しました。
+- ko: &c최신 문장 저장에 실패했습니다.
+- la: &cSententia novissima servari non potuit.
+- lzh: &c最新格言未能收入珍藏。
+- nl: &cHet nieuwste citaat kon niet worden opgeslagen.
+- pt: &cFalha ao salvar a citação mais recente.
+- ru: &cНе удалось сохранить последнюю цитату.
+- sa: &cनवीनतमा उक्तिः रक्षितुं नाशक्यत।
+- sv: &cDet gick inte att spara det senaste citatet.
+- zh_tw: &c儲存最新名言失敗。
+
+## command.quoteFavorite.shortcutSaved
+- asl_gloss: &a★ LATEST QUOTE SAVE FAVORITES.
+- de: &a★ Das neueste Zitat wurde zu den Favoriten hinzugefügt.
+- en: &a★ Saved the latest quote to Favorites.
+- es: &a★ La cita más reciente se guardó en Favoritos.
+- fi: &a★ Uusin sitaatti tallennettiin Suosikkeihin.
+- fr: &a★ La dernière citation a été ajoutée aux favoris.
+- hi: &a★ नवीनतम उद्धरण पसंदीदा में सहेज दिया गया।
+- is: &a★ Nýjasta tilvitnunin var vistuð í Uppáhald.
+- it: &a★ La citazione più recente è stata salvata nei Preferiti.
+- ja: &a★ 最新の名言をお気に入りに保存しました。
+- ko: &a★ 최신 문장을 즐겨찾기에 저장했습니다.
+- la: &a★ Sententia novissima in Dilecta servata est.
+- lzh: &a★ 已收最新格言於珍藏。
+- nl: &a★ Het nieuwste citaat is aan Favorieten toegevoegd.
+- pt: &a★ A citação mais recente foi salva nos Favoritos.
+- ru: &a★ Последняя цитата добавлена в Избранное.
+- sa: &a★ नवीनतमोक्तिः प्रियेषु रक्षिता।
+- sv: &a★ Det senaste citatet har lagts till i Favoriter.
+- zh_tw: &a★ 已將最新名言加入收藏。
+
+## command.quoteFavorite.unknownSubcommand
+- asl_gloss: &cUNKNOWN SUBCOMMAND. SEE /quoteFavorite help.
+- de: &cUnbekannter Unterbefehl. Sieh dir /quoteFavorite help an.
+- en: &cUnknown subcommand. See /quoteFavorite help.
+- es: &cSubcomando desconocido. Consulta /quoteFavorite help.
+- fi: &cTuntematon alikomento. Katso /quoteFavorite help.
+- fr: &cSous-commande inconnue. Voir /quoteFavorite help.
+- hi: &cअज्ञात सबकमांड। /quoteFavorite help देखें।
+- is: &cÓþekkt undirskipun. Sjá /quoteFavorite help.
+- it: &cSottocomando sconosciuto. Controlla /quoteFavorite help.
+- ja: &c不明なサブコマンドです。/quoteFavorite help を確認してください。
+- ko: &c알 수 없는 하위 명령어입니다. /quoteFavorite help 를 확인하세요.
+- la: &cSubmandatum ignotum. Vide /quoteFavorite help.
+- lzh: &c子令不識。請觀 /quoteFavorite help。
+- nl: &cOnbekend subcommando. Bekijk /quoteFavorite help.
+- pt: &cSubcomando desconhecido. Veja /quoteFavorite help.
+- ru: &cНеизвестная подкоманда. См. /quoteFavorite help.
+- sa: &cअज्ञातोपादेशः। /quoteFavorite help पश्य।
+- sv: &cOkänt underkommando. Se /quoteFavorite help.
+- zh_tw: &c未知的子指令。請查看 /quoteFavorite help。
+
