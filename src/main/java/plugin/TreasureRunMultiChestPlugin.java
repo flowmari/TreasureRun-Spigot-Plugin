@@ -238,6 +238,7 @@ public class TreasureRunMultiChestPlugin extends JavaPlugin implements Listener,
 
     saveDefaultConfig();
     reloadConfig();
+    getServer().getMessenger().registerOutgoingPluginChannel(this, "treasurerun:lang");
 
     // ✅ 採用向け：Join自動スタートはデフォルトOFF（必要時だけON）
     boolean autoStart = getConfig().getBoolean("debug.autoStartOnJoin", false);
